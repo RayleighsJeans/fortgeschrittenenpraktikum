@@ -1,7 +1,8 @@
-*.aux
-*.log
-*.toc
-*.synctex.gz
+template/*.pdf
+template/*.aux
+template/*.log
+template/*.toc
+template/*.synctex.gz
 Versuch*/protokoll/*.aux
 Versuch*/protokoll/*.log
 Versuch*/protokoll/*.toc
@@ -10,4 +11,3 @@ Versuch*/*.aux
 Versuch*/*.log
 Versuch*/*.toc
 Versuch*/*.synctex.gz
-
