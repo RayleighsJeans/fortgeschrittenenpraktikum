@@ -1,3 +1,7 @@
+*.aux
+*.log
+*.toc
+*.synctex.gz
 Versuch*/protokoll/*.aux
 Versuch*/protokoll/*.log
 Versuch*/protokoll/*.toc
