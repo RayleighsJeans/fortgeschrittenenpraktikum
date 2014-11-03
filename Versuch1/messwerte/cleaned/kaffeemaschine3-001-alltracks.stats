@@ -1,0 +1,21 @@
+Maschinenkaffee Verdünnung 1:19, 1800 frames Aufnahmedauer
+
+* FILE: 
+  Records:      4164
+  Out of range:    0
+  Invalid:         0
+  Blank:           0
+  Data Blocks:     1
+
+* COLUMN: 
+  Mean:        126.7602
+  Std Dev:      60.2744
+  Sum:      527829.3240
+  Sum Sq.:  8.20355e+07
+
+  Minimum:      27.0997 [ 110]
+  Maximum:     559.6170 [ 444]
+  Quartile:     77.1952 
+  Median:      120.1295 
+  Quartile:    166.9200 
+

@@ -1,0 +1,21 @@
+Automatenkaffee Verdünnung 1:4, 1800 frames Aufnahmedauer
+
+* FILE: 
+  Records:      4706
+  Out of range:    0
+  Invalid:         0
+  Blank:           0
+  Data Blocks:     1
+
+* COLUMN: 
+  Mean:        102.1244
+  Std Dev:      70.6362
+  Sum:      480597.5364
+  Sum Sq.:  7.25612e+07
+
+  Minimum:      20.8117 [4052]
+  Maximum:     671.9110 [1631]
+  Quartile:     57.1620 
+  Median:       80.8996 
+  Quartile:    123.0560 
+

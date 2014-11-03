@@ -1,0 +1,25 @@
+[CaptureSettings]
+CaptureAppBuild=0033
+CameraType=1
+Operator=
+SampleName=coffee
+Diluent=aqua dest.
+Concentration=1:4
+Pretreatment=
+Remarks=
+TimeCaptured=15:11:52  21/10/2014
+PixelSize=166
+SliderShutter=507
+Shutter=507
+Gain=404
+Brightness=1
+Gamma=0
+FramesPerSecond=30.00
+DurationFrames=1800
+DurationSeconds=60
+Skips=0
+ManualSensorUsed=1
+SensorTemp=24.6
+Interleaved=0
+CameraHistogramMin=0
+CameraHistogramMax=0

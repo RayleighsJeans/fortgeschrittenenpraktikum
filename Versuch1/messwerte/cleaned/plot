@@ -1,0 +1,21 @@
+#!/bin/bash
+
+for f in `ls . | grep '.csv'`; do
+    alias="`fgrep aliases -e "$f" | cut -d @ -f 2`"
+    gnuplot -e "set terminal svg enhanced size 1024,512\
+        ;set output '$(basename -s .csv ${f}).svg'\
+        ;bin_width=5;bin_number(x)=floor(x/bin_width);rounded(x)=bin_width*(bin_number(x)+0.5) \
+        ;set datafile separator ','\
+        ;set xtics 100\
+        ;set grid\
+        ;set ylabel 'Beobachtete Teilchen'; set xlabel 'Größe in nm'\
+        ;print '$alias'; stats '$f' u 2 \
+        ;set style rect fc lt -1 fs solid 0.5 noborder\
+        ;set obj rect from STATS_mean-STATS_stddev, graph 0 to STATS_mean+STATS_stddev, graph 1\
+        ;set arrow from STATS_mean,graph(0,0) to STATS_mean,graph(1,1) nohead\
+        ;set label sprintf(' Mittelwert: %1.2f nm', STATS_mean) at STATS_mean+10,graph 0.95\
+        ;set label sprintf(' Standardabweichung: %1.2f nm', STATS_stddev) at STATS_mean+10,graph 0.9\
+        ;p [0:1000] '${f}' u (rounded(\$2)):(1) smooth frequency title '$alias'\
+        " 2> $(basename -s .csv ${f}).stats
+        inkscape -f $(basename -s .csv ${f}).svg -A $(basename -s .csv ${f}).pdf
+done

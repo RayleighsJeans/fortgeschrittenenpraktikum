@@ -1,0 +1,20 @@
+#!/bin/bash
+
+for f in `ls . | grep '.csv'`; do
+    alias="`fgrep aliases -e "$f" | cut -d @ -f 2`"
+    gnuplot -e "set terminal svg enhanced size 1024,512\
+        ;set output '$(basename -s .csv ${f}).diffco.svg'\
+        ;bin_width=0.1;bin_number(x)=floor(x/bin_width);rounded(x)=bin_width*(bin_number(x)+0.5) \
+        ;set datafile separator ','\
+        ;set grid\
+        ;set ylabel 'Beobachtete Teilchen'; set xlabel 'Diffusionskoeffizient in µm^2/s'\
+        ;print '$alias'; stats '$f' u (\$3/1e6) \
+        ;set style rect fc lt -1 fs solid 0.5 noborder\
+        ;set obj rect from STATS_mean-STATS_stddev, graph 0 to STATS_mean+STATS_stddev, graph 1\
+        ;set arrow from STATS_mean,graph(0,0) to STATS_mean,graph(1,1) nohead\
+        ;set label sprintf(' Mittelwert: %1.2f µm^2/s', STATS_mean) at STATS_mean+0.1,graph 0.9\
+        ;set label sprintf(' Standardabweichung: %1.2f µm^2/s', STATS_stddev) at STATS_mean+0.1,graph 0.85\
+        ;p [0:20] '${f}' u (rounded(\$3/1e6)):(1) smooth frequency title '$alias'\
+        " 2> $(basename -s .csv ${f}).diffco.stats
+    inkscape -f $(basename -s .csv ${f}).diffco.svg -A $(basename -s .csv ${f}).diffco.pdf
+done
