@@ -16,6 +16,7 @@
 \usepackage{wrapfig}
 \usepackage[font=small]{caption}
 \usepackage{subcaption}
+\usepackage{lscape}
 
 \renewcommand{\thefigure}{Abb. \arabic{figure}}
 
@@ -140,7 +141,159 @@ Mit dem Beschriebenen Aufbau werden 2 unterschiedliche Kaffeelösungen untersuch
 Für die Verifizierung der Zusammenhänge werden bei, einer möglichst konstanten Temperatur, sowohl Konzentrationen als auch Aufnahmedauern verändert. Beachtet werden muss jedoch, das polydisperse Lösungen vorliegen.\\
 In der Software können Kontrast und weitere Kameraeinstellung bearbeitet werden, sodass ein möglichst gutes Bild mit wenigen '\tilt{toten}' Teilchen (Partikel, deren tracking nicht über die gesammte Aufnahme oder nur über ein paar \tilt{frames} betrieben werden kann) aufgenommen wird. Weiterhin ist es wichtig, eine nicht zu hohe Konzentration und zu kurze Aufnahmedauer auszuwählen, da die Leistung der Kamera und der Software begrenzt sind. Schließlich nimmt das Programm der \textbf{NANOSIGHT Ltd.} alle Berechnungen und Bestimmungen intern vor und liefert die gesuchten Daten.
 \section{Auswertung}
-\subsection{Diskussion}
+%Unter der Berücksichtigung der Verwertbarkeit der einzelnen Tracks wurde eine Mittelwertbildung und Berechnung der Standardabweichung vorgenommen (siehe Abbildungen im Anhang). 
+Die von \textbf{NTA} ausgebenen Dateien enthielten Daten zu einzelnen verfolgten Partikeln. Diese mussten von nicht relevanten Datensätzen (vom Programm als solche gekennzeichnet) und Mehrfachnennungen der übrigen Partikel befreit werden und konnten dann zur Erstellung von Histogrammen und zur grundlegenden statistischen Analyse benutzt werden. Das Ergebnis kann im Anhang betrachtet werden, wobei der Mittelwert der jeweils ausgewerteten Größe als schwarze Linie und die einfache Standardabweichung als graue Umgebung gekennzeichnet sind. Für die durchschnittlichen Partikeldurchmesser des Automaten- und des Maschinenkaffees wurden die jeweils berechneten Mittelwerte und ihre Standardabweichungen untereinander gemittelt, wobei Werte, die aus längeren Messungen stammen, eine höhere Gewichtung zukam. Für die Diffusionskoeffizienten wurden die Mittelwerte bei gleicher Konzentration benutzt, da die Verdünnung Einfluss auf diese Größe hat.
+\begin{align*}
+%	\overline{d}\ix{Automat}&=\unit[\left(134\pm 83\right)]{nm} \\
+%	\overline{D}\ix{A, 1:9}&=\unit[\left(2,5\pm 1,1 \right)]{\frac{\mu m^2}{s}} \\
+%	\overline{d}\ix{Maschine}&=\unit[\left(137\pm 72\right)]{nm} \\
+%	\overline{D}\ix{M, 1:4}&=\unit[\left(8,0\pm 5,0\right)]{\frac{\mu m^2}{s}} \\
+%	\overline{D}\ix{M, 1:9}&=\unit[\left(4,3\pm 2,3\right)]{\frac{\mu m^2}{s}} \\
+%	\overline{D}\ix{M, 1:19}&=\unit[\left(5,1\pm 3,0\right)]{\frac{\mu m^2}{s}} \\
+	\begin{array}{c|c|c|c|c|c}
+	\unit[\overline{d}\ix{Automat}]{/nm}& \unit[\overline{D}\ix{A, 1:9}]{/\frac{\mu m^2}{s}} & \unit[\overline{d}\ix{Maschine}]{/nm} & \unit[\overline{D}\ix{M, 1:4}]{/\frac{\mu m^2}{s}} & \unit[\overline{D}\ix{M, 1:9}]{/\frac{\mu m^2}{s}} & \unit[\overline{D}\ix{M, 1:19}]{/\frac{\mu m^2}{s}} \\
+	\hline 
+\left(134\pm 83\right)	& \left(2,5\pm 1,1 \right) & \left(137\pm 72\right) & \left(8,0\pm 5,0\right) & \left(4,3\pm 2,3\right) & \left(5,1\pm 3,0\right)
+	\end{array} 
+\end{align*}
+Beim Betrachten der Histogramme fällt die große Standardabweichung im Verhältnis zum Mittelwert auf. Auch sticht ins Auge, dass ein klassischer Mittelwert der Messverteilung nicht gerecht wird, da dieser sich teilweise bereits weit auf der abfallenden Flanke der Verteilung befindet, während sich die Messungen um einen anderen Wert häufen. Eine genauere Analyse der Messwertverteilungen wäre daher angebracht, um eventuell genauere Werte zu gewinnen -- momentan wird der Ungenauigkeit durch einen großen Messfehler (Standardabweichung) Rechnung getragen.\\
+Das Programm selbst bietet eine Zusammenfassung der gemessenen Daten an, jedoch gibt diese unter Umständen verschiedene Größen aus und die Werte für die ausgegebenen Größen liegen weit außerhalb der Möglichkeiten des Messwertspektrums.\\
+Zu Fehlerquellen in der Messung liegen uns keine relevanten Informationen vor, da die gesamte Messapparatur ein proprietäres Design darstellt und keinen Einblick in die Messungen zulässt; die Auswertung erfolgt allein über die ausgegebenen Daten der zugehörigen Software. Es lassen sich aber externe Faktoren erahnen, welche mehr oder weniger starken Einfluss auf die Messungen haben könnten: Vibrationen des Experimentiertisches, Teperaturschwankungen (die Messung findet unter der Vorraussetzung einer konstanten Temperatur statt), Verunreinigungen der untersuchten Suspension und der optischen Bauteile des Aufbaus.
 \section{Anhang}
-Die originalen Messwert-Aufzeichnungen liegen bei.
+\subsection{Messwerte}
+\begin{landscape}
+\begin{figure}[H]
+	\hspace{-3cm}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeeautomat-001-alltracks.diffco}.pdf}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeeautomat-001-alltracks}.pdf}
+	\end{subfigure}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+	\hspace{-3cm}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeeautomat2-001-alltracks.diffco}.pdf}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeeautomat2-001-alltracks}.pdf}
+	\end{subfigure}
+\end{figure}
+\begin{figure}[H]
+	\hspace{-3cm}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeeautomat3-001-alltracks.diffco}.pdf}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeeautomat3-001-alltracks}.pdf}
+	\end{subfigure}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+	\hspace{-3cm}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeeautomat4-001-alltracks.diffco}.pdf}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeeautomat4-001-alltracks}.pdf}
+	\end{subfigure}
+\end{figure}
+\begin{figure}[H]
+	\hspace{-3cm}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeemaschine-001-alltracks.diffco}.pdf}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeemaschine-001-alltracks}.pdf}
+	\end{subfigure}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+	\hspace{-3cm}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeemaschine2-001-alltracks.diffco}.pdf}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeemaschine2-001-alltracks}.pdf}
+	\end{subfigure}
+\end{figure}
+\begin{figure}[H]
+	\hspace{-3cm}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeemaschine2kurz-004-alltracks.diffco}.pdf}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeemaschine2kurz-004-alltracks}.pdf}
+	\end{subfigure}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+	\hspace{-3cm}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeemaschine2lang-001-alltracks.diffco}.pdf}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeemaschine2lang-001-alltracks}.pdf}
+	\end{subfigure}
+\end{figure}
+\begin{figure}[H]
+	\hspace{-3cm}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeemaschine3-001-alltracks.diffco}.pdf}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeemaschine3-001-alltracks}.pdf}
+	\end{subfigure}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+	\hspace{-3cm}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeemaschine3kurz-001-alltracks.diffco}.pdf}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeemaschine3kurz-001-alltracks}.pdf}
+	\end{subfigure}
+\end{figure}
+\begin{figure}[H]
+	\hspace{-3cm}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeemaschine3lang-001-alltracks.diffco}.pdf}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeemaschine3lang-001-alltracks}.pdf}
+	\end{subfigure}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+	\hspace{-3cm}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeemaschine3langkorrekt-001-alltracks.diffco}.pdf}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeemaschine3langkorrekt-001-alltracks}.pdf}
+	\end{subfigure}
+\end{figure}
+\begin{figure}[H]
+	\hspace{-3cm}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeemaschinekurz-001-alltracks.diffco}.pdf}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeemaschinekurz-001-alltracks}.pdf}
+	\end{subfigure}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+	\hspace{-3cm}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeemaschinelang-001-alltracks.diffco}.pdf}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.85\textwidth}
+		\includegraphics[width=\textwidth]{{messwerte/cleaned/kaffeemaschinelang-001-alltracks}.pdf}
+	\end{subfigure}
+\end{figure}
+\end{landscape}
 \end{document}
