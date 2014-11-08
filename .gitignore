@@ -1,5 +1,7 @@
 *~
 template/*.pdf
+template/*.blg
+template/*.bbl
 template/*.aux
 template/*.log
 template/*.toc
