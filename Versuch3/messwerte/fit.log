@@ -1,0 +1,401 @@
+
+
+*******************************************************************************
+Wed Nov  5 11:22:35 2014
+
+
+FIT:    data read from "stromspannungslampe.data"
+        format = z
+        #datapoints = 22
+        residuals are weighted equally (unit weight)
+
+function used for fitting: I(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 71072.7           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 132.769
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 59 iterations the fit converged.
+final sum of squares of residuals : 216.004
+rel. change during last iteration : -5.19174e-10
+
+degrees of freedom    (FIT_NDF)                        : 19
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 3.37174
+variance of residuals (reduced chisquare) = WSSR/ndf   : 11.3686
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.0154668        +/- 0.004276     (27.65%)
+b               = 1.93015          +/- 0.05629      (2.916%)
+c               = -56.8157         +/- 0.7941       (1.398%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.999  1.000 
+c              -0.222  0.206  1.000 
+
+
+*******************************************************************************
+Wed Nov  5 11:26:55 2014
+
+
+FIT:    data read from "stromspannungslampeunterbelastung.data" u 1:(-$2*$1)
+        format = x:z
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: P(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Wed Nov  5 11:27:09 2014
+
+
+FIT:    data read from "stromspannungslampeunterbelastung.data" u 1:(-$2*$1)
+        format = x:z
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: P(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.5403e+06        delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 618.442
+
+initial set of free parameter values
+
+d               = 1
+e               = 1
+f               = 1
+g               = 1
+
+After 887 iterations the fit converged.
+final sum of squares of residuals : 37183.2
+rel. change during last iteration : -8.5489e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 51.5359
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2655.95
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+d               = -1455.99         +/- 1.598e+04    (1097%)
+e               = -0.0317054       +/- 0.3894       (1228%)
+f               = 1251.78          +/- 1.607e+04    (1284%)
+g               = -0.355342        +/- 0.2077       (58.46%)
+
+
+correlation matrix of the fit parameters:
+
+               d      e      f      g      
+d               1.000 
+e              -1.000  1.000 
+f              -1.000  1.000  1.000 
+g              -0.116  0.127  0.117  1.000 
+
+
+*******************************************************************************
+Wed Nov  5 11:28:05 2014
+
+
+FIT:    data read from "stromspannungslampeunterbelastung.data" u 1:(-$2*$1)
+        format = x:z
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: P(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.11841e+08       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 10898.5
+
+initial set of free parameter values
+
+d               = -1455.99
+e               = -0.0317054
+f               = 1251.78
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 61371.2
+rel. change during last iteration : -2.99471e-06
+
+degrees of freedom    (FIT_NDF)                        : 15
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 63.9642
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4091.41
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+d               = -322.869         +/- 135.4        (41.95%)
+e               = -0.474516        +/- 0.07596      (16.01%)
+f               = 88.2458          +/- 74.15        (84.02%)
+
+
+correlation matrix of the fit parameters:
+
+               d      e      f      
+d               1.000 
+e               0.450  1.000 
+f              -0.768  0.197  1.000 
+
+
+*******************************************************************************
+Wed Nov  5 11:28:36 2014
+
+
+FIT:    data read from "stromspannungslampeunterbelastung.data" u 1:(-$2*$1)
+        format = x:z
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: P(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 61371.2           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 404.133
+
+initial set of free parameter values
+
+d               = -322.869
+e               = -0.474516
+f               = 88.2458
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 61371.2
+rel. change during last iteration : -1.14181e-08
+
+degrees of freedom    (FIT_NDF)                        : 15
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 63.9642
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4091.41
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+d               = -322.869         +/- 135.4        (41.95%)
+e               = -0.474522        +/- 0.07596      (16.01%)
+f               = 88.2458          +/- 74.15        (84.02%)
+
+
+correlation matrix of the fit parameters:
+
+               d      e      f      
+d               1.000 
+e               0.450  1.000 
+f              -0.768  0.197  1.000 
+
+
+*******************************************************************************
+Wed Nov  5 11:29:40 2014
+
+
+FIT:    data read from "stromspannungslampeunterbelastung.data" u 1:(-$2*$1)
+        format = x:z
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: P(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1.33052e+06       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 5934.8
+
+initial set of free parameter values
+
+a               = 0.0154668
+b               = 1.93015
+c               = -56.8157
+d               = -322.869
+
+After 1124 iterations the fit converged.
+final sum of squares of residuals : 68.9051
+rel. change during last iteration : -1.70734e-09
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.21851
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.92179
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.000327687      +/- 9.464e-05    (28.88%)
+b               = 2.80264          +/- 0.06449      (2.301%)
+c               = -65.1166         +/- 0.9787       (1.503%)
+d               = 0.137748         +/- 1.875        (1361%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      d      
+a               1.000 
+b              -1.000  1.000 
+c              -0.782  0.770  1.000 
+d               0.454 -0.445 -0.845  1.000 
+
+
+*******************************************************************************
+Wed Nov  5 11:29:50 2014
+
+
+FIT:    data read from "stromspannungslampeunterbelastung.data" u 1:(-$2*$1)
+        format = x:z
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: P(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 69.2466           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 245623
+
+initial set of free parameter values
+
+a               = 0.000327687
+b               = 2.80264
+c               = -65.1166
+d               = 0.137748
+
+After 2 iterations the fit converged.
+final sum of squares of residuals : 69.0513
+rel. change during last iteration : -5.42733e-07
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.22086
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.93224
+
+BREAK:          Singular matrix in Invert_RtR
+
+
+
+*******************************************************************************
+Wed Nov  5 11:29:55 2014
+
+
+FIT:    data read from "stromspannungslampeunterbelastung.data" u 1:(-$2*$1)
+        format = x:z
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: P(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 69.0513           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 283622
+
+initial set of free parameter values
+
+a               = 0.0003279
+b               = 2.80264
+c               = -65.1166
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 69.0513
+rel. change during last iteration : -8.91038e-11
+
+degrees of freedom    (FIT_NDF)                        : 15
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.14556
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.60342
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.0003279        +/- 8.155e-05    (24.87%)
+b               = 2.80264          +/- 0.05583      (1.992%)
+c               = -65.1166         +/- 0.5062       (0.7774%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -1.000  1.000 
+c              -0.836  0.823  1.000 
+
+
+*******************************************************************************
+Wed Nov  5 23:27:51 2014
+
+
+FIT:    data read from "stromspannungslampeunterbelastung.data" u 1:(-$2*$1)
+        format = x:z
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: P(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 69.0513           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 283622
+
+initial set of free parameter values
+
+a               = 0.0003279
+b               = 2.80264
+c               = -65.1166
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 69.0513
+rel. change during last iteration : -8.91157e-11
+
+degrees of freedom    (FIT_NDF)                        : 15
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.14556
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.60342
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.0003279        +/- 8.155e-05    (24.87%)
+b               = 2.80264          +/- 0.05583      (1.992%)
+c               = -65.1166         +/- 0.5062       (0.7774%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -1.000  1.000 
+c              -0.836  0.823  1.000 
