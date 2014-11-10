@@ -16,6 +16,8 @@
 \usepackage{wrapfig}
 \usepackage[font=small]{caption}
 \usepackage{subcaption}
+\usepackage{lscape}
+\usepackage{hyperref}
 
 \renewcommand{\thefigure}{Abb. \arabic{figure}}
 
@@ -31,7 +33,6 @@
 \newcommand{\grad}[1]{\textit{grad}\left(#1\right)}
 \newcommand{\divergenz}[1]{\textit{div}\left(#1\right)}
 \newcommand{\euler}{\mathnormal{e}}
-%\newcommand{\imag}{\mathbf{i}}
 \newcommand{\sgn}[1]{\text{sgn}\left(#1\right)}
 
 \title{Protokoll: Chaotisches Pendel}
@@ -69,7 +70,7 @@ Für reale, chaotische Prozesse sind die Anfangsbedingungen jedoch nicht vollst�
 \newpage
 \subsection{Nichtlineare Bewegungsgleichung}
 \begin{wrapfigure}[18]{ro}{0.33\textwidth}
-\includegraphics[scale=0.3]{pendel.png}
+\includegraphics[width=0.39\textwidth]{pendel.png}
 \caption{Aufbau, frontales Schema}
 \label{img:aufbau}
 \end{wrapfigure}
@@ -189,8 +190,24 @@ Die Amplitude der, durch einen Elektromotor getriebenen Erregung, sowie die Lage
 Eingangs wird bei abgeschalteter Erregung und unter Änderung des Abstandes des Pendelkörpers von der Drehachse am Oszilloskop (\tilt{Roll-Modus}) die  Schwingungsfrequenz untersucht.\\
 Anschließend wird bei sukzessiver Änderung des Parameters Strom im stroboskopischen Phasenraumbild nach der Bifurkation einer Periodenverdopplung gesucht. Beispielsweise kann das der Übergang von einer \tilt{Einer-Periode} zu einer  \tilt{Zweierperiode} (siehe \ref{img:bifur} an $\beta_1\approx$ 0.24) sein. Außerdem wird jeweils eine Messung für ein $\Omega$ gemacht. Die gefundenen Werte werden danach mit denen der numerischen Simulation des bereitgestellten Programms verglichen. Die Amplitude sowie Frequenz der Erregung bleibt konstant.\\
 Schließlicht erfolgt nach Einstellung der, in der Anleitung gegebenen Parameter eine Messung zu den Anfangsbedingungen einer bestimmten Erreger-Phasenlage. Hierzu wird die Auslenkung und Winkelgeschwindigkeit zeitabhängig Oszillographiert. Das gewonnene Bild wird wiederum mit der Simulation für die ausgewählten Werte verglichen.
-\section{Auswertung}
-\subsection{Diskussion}
+\section{Messungen}
+Zuerst wurden die Frequenzen für Schwingungen beliebiger Größe bei ausgeschalteter Wirbelstrombremse und maximalem Abstand des Pendelgewichts gemessen. Die Ergebnisse sind in \ref{img:freq} dargestellt, zusammen mit einer Näherung, die in der Versuchsanleitung vorgeschlagen wurde. Diese Näherung sollte erst ab einer Auslenkung von $\frac{\pi}{2}$ merkliche Abweichungen von der exakten Lösung aufweisen, was mit unserer Messung sehr gut korreliert. Die Messung der Frequenzen erfolgte durch Vermessen der Zeit zwischen zwei Auslenkungsextrema ($\hat{=}\frac{T}{2}$), die der Auslenkung durch Mittelwertbildung der ausgegebenen Spannungen bei diesen Maxima. Der Fehlerbereich hierfür ist großzügig gewählt, nämlich der halbe Unterschied zwischen den beiden Maxima, zuzüglich einer geschätzten Messunsicherheit des Oszilloskops von $\Delta U\approx\unit[30]{mV}$ bei Philipps Messungen, beziehungsweise $\Delta U\approx\unit[3]{mV}$ bei Toms Messungen. Die Diskrepanz erklärt sich durch die Wahl unterschiedlicher Messbereiche. Die Messunsicherheit der Frequenz (das Oszilloskop bot eine Funktion zum "`direkten"' Messen von Frequenzen) haben wir zu $\Delta f\approx\unit[0,03]{Hz}$ geschätzt. Lediglich im Bereich höherer Auslenkungen kommt es zur Abweichung der Näherung von den Messwerten -- aufgrund des eingeschränkten Gültigkeitsbereichs der Näherung entspricht dies aber völlig den Erwartungen. Ein oberflächlicher Vergleich mit der in der Anleitung gegebenen (aber leider nicht näher spezifizierten) Kurve ergibt sogar in diesem Bereich eine Übereinstimmung.
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{messwerte/frequenzauslenkung.pdf}
+	\caption{Frequenzen der Pendelbewegung bei unterschiedlichen Auslenkungen}
+	\label{img:freq}
+\end{figure}
+Als nächstes wurden Bifurkationen untersucht. Zuerst wurden feste Parameter vorgegeben, das Pendel in ein Rotationsregime getrieben und dann $\beta\ix{1}$ kontinuierlich verändert, bis sich im stroboskopischen Phasenraumbild eine Periodenverdopplung zeigte. Dies wurde für einen ansonsten festen Parametersatz zweimal getan und dann wurde der Abstand des Pendelgewichts von der Drehachse geändert, um $\Omega$ einen neuen Wert zu geben. Nach erfolgreichem Einschwingen im Rotationsregime wurde auch hier wieder $\beta\ix{1}$ kontinuierlich bis zur Periodenverdopplung verändert. Die Ergebnisse zeigt \ref{img:beef}. Unsere Fehlerberechnung stützt sich auf das Gaußsche Fehlerfortpflanzungsgesetz, das wir mit einem CAS auf die funktionalen Zusammenhänge zwischen normierten Parametern und Messgrößen angewendet haben, um letztlich die eingezeichneten Messfehler zu erhalten. Von der Anleitung wurde an dieser Stelle eine Simulation empfohlen, um die Bifurkationsstellen zu verifizieren oder zumindest mit der Simulation zu vergleichen. Da das vorgeschlagene Programm jedoch in unserem Parameterbereich keine auswertbaren Bifurkationsdiagramme geliefert hat, können wir an dieser Stelle leider keinen Vergleich zur Simulation liefern. Da keine Kenntnisse über den Zusammenhang von $\Omega$ und $\beta\ix{1}$ in der Parameterebene bestehen, kann auch kein Rückschluss auf die Qualität der gewonnenen Messwerte gemacht werden. Nichtsdestotrotz beobachteten  wir für die in \ref{img:beef} gezeigten Werte qualitative Bewegungsänderung des Pendels, was den Erwartung aus den Grundlagen gerecht wird.
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{messwerte/beefurkation.pdf}
+	\caption{Punkte in der $(\Omega;\beta\ix{1})$-Parameterebene, bei denen Bifurkationen auftraten}
+	\label{img:beef}
+\end{figure}
+Um Aussagen über den Vorhersagehorizont machen zu können, war es notwendig, zeitsynchron mit der Phase der Erregung die Auslenkung und die Winkelgeschwindigkeit aufzunehmen. Dies war jedoch bei dem gegebenen Versuchsaufbau nicht möglich, weswegen wiederum kein Vergleich zur Simulation angestellt werden konnte. Wir erhielten keine Referenz für die Aussagen über den Vorhersagehorizont.
+\section{Quellen}
+\url{http://de.wikipedia.org/wiki/Chaos}\\
+\url{http://de.wikipedia.org/wiki/Chaosforschung}\\
+Versuchsanleitung "`Bifurkation und Chaos(Pendel)"'
 \section{Anhang}
 Die originalen Messwert-Aufzeichnungen liegen bei.
 \end{document}

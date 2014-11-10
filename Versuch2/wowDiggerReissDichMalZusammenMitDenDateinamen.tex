@@ -31,7 +31,7 @@
 \newcommand{\imag}{\mathbf{i}}
 \newcommand{\signum}{\text{sgn}}
 
-\title{Protokoll: Bifurkation und Chaos am Beispiel des erregten Pendels}
+\title{Protokoll: Chaos und Bifurkation am Beispiel des erregten Pendels}
 \author{Tom Kranz, Philipp Hacker}
 \date{\today}
 
@@ -71,8 +71,7 @@ In diesem Versuch wird die Natur chaotischer Prozesse am Beispiel des periodisch
 Direkt gemessen wird nur die aktuelle Auslenkung des Pendels. Dies geschieht über die in \ref{img:wicosch} gezeigte Winkelcodescheibe, eine Auflichtschranke und eine Auswertungselektronik.
 \begin{figure}[H]
 	\centering
-%	\includegraphics[width=\textwidth]{winkelcodescheibe.png}
-%TODO Bild!!
+	\includegraphics[width=\textwidth]{winkelcodescheibe.png}
 	\caption{Die benutzte Winkelcodescheibe -- (4) in \ref{img:pererpen}}
 	\label{img:wicosch}
 \end{figure}
@@ -118,9 +117,22 @@ Gleichung (\ref{eq:bew4}) ist eine hochgradig nichtlineare Differentialgleichung
 Die Anfangsbedingungen bilden ein 3-Tupel $(x\ix{0},y\ix{0},\tau\ix{0})$ und stammen vorerst aus dem $\mathbb{R}^3$. Da die Auslenkung $x$ jedoch Winkel in einem Kreis darstellt, hat ihr Definitionsbereich nur eine Breite von $2\,\pi$. In Kapitel \ref{ch2.2} wird bereits angedeutet, dass dieser Definitionsbereich das halboffene Intervall $\left[-\pi;\pi\right)$ ist. Die Winkelgeschwindigkeit $y$ dagegen kann beliebig groß werden, die Einschränkung in Kapitel \ref{ch2.2} gilt nur für den Messbereich. Da auch $\tau$ nur im Argument einer Winkelfunktion vorkommt, nämlich multipliziert mit der normierten Kreisfrequenz $\Omega$, hat auch der Wertebereich dieser Variable eine endliche Breite. Zur Vereinfachung ersetzen wir die normierte Zeit $\tau$ durch die Phasenlage der Erregung $\Omega\cdot\tau=\omega\cdot t\in\left[0;2\,\pi\right)$. Dadurch sind die Anfangsbedingungen $(x\ix{0},y\ix{0},\omega\cdot t\ix{0})\in\left[-\pi;\pi\right)\times\mathbb{R}\times\left[0;2\,\pi\right)=\mathbb{T}\times\mathbb{R}\times\mathbb{T}$, wobei $\mathbb{T}$ für "`Torus"' steht und den Kreis darstellt. Jeder Punkt in diesem dreidimensionalen Raum legt die Trajektorie des Systems eindeutig fest.
 \subsubsection{Bewegungsregime und Bifurkationen}
 Je nach Anfangsbedingungen und Parameterwahl fällt die Trajektorie asymptotisch in eines von drei sogenannten Bewegungsregimen: Rotation, Libration oder Chaos. Das Rotationsregime zeichnet sich dadurch aus, dass das Pendel sich nur in eine Richtung bewegt, die Winkelgeschwindigkeit also immer das gleiche Vorzeichen hat. Bei der Libration bewegt sich die Auslenkung immer zwischen zwei Grenzen, das Pendel schwingt also hin und her. Chaotischen Bewegungen fehlt jegliche Periodizität.\\
-Hat sich das System in ein periodisches Regime eingeschwungen, führen kleine Veränderungen in Kontrollparametern zunächst nur zu geringfügigen Verschiebungen der Phasenbahn und irgendwann stellen sich qualitative Veränderungen der Bahn ein -- im zeitlich kontinuierlichen $(x;y)$ Phasenbild spaltet sie sich auf, im stroboskopischen Phasendiagramm treten doppelt so viele Punkte auf.
-\section{Durchführung}
-\section{Auswertung}
+Hat sich das System in ein periodisches Regime eingeschwungen, führen kleine Veränderungen in einzelnen Kontrollparametern zunächst nur zu geringfügigen Verschiebungen der Phasenbahn und irgendwann stellen sich qualitative Veränderungen der Bahn ein -- im zeitlich kontinuierlichen $(x;y)$ Phasenbild spaltet sie sich auf, im stroboskopischen Phasendiagramm treten doppelt so viele Punkte auf. Dies deutet darauf hin, dass die periodische Bewegung nunmehr nicht nur eine, sondern zwei Erregerperioden braucht, um in den Ausgangszustand zurückzukehren. Dies nennt man Bifurkation. Weitere Veränderung des gewählten Parameters zieht weitere Bifurkationen nach sich, sodass die Periode nun das Vierfache der Erregerperiode beträgt und so weiter. Die Veränderung des Parameters, die nötig ist, um eine Bifurkation zu bewirken, wird von Mal zu Mal geringer, bis die Bewegung irgendwann jegliche Periodizität verliert (Periode $\infty$) und ins Chaos übergeht.
+\section{Messungen}
+Zuerst wurden die Frequenzen für Schwingungen beliebiger Größe bei ausgeschalteter Wirbelstrombremse und maximalem Abstand des Pendelgewichts gemessen. Die Ergebnisse sind in \ref{img:freq} dargestellt, zusammen mit einer Näherung, die in der Versuchsanleitung vorgeschlagen wurde. Diese Näherung sollte erst ab einer Auslenkung von $\frac{\pi}{2}$ merkliche Abweichungen von der exakten Lösung aufweisen, was mit unserer Messung sehr gut korreliert. Die Messung der Frequenzen erfolgte durch Vermessen der Zeit zwischen zwei Auslenkungsextrema ($\hat{=}\frac{T}{2}$), die der Auslenkung durch Mittelwertbildung der ausgegebenen Spannungen bei diesen Maxima. Der Fehlerbereich hierfür ist großzügig gewählt, nämlich der halbe Unterschied zwischen den beiden Maxima, zuzüglich einer geschätzten Messunsicherheit des Oszilloskops von $\Delta U\approx\unit[30]{mV}$ bei Philipps Messungen, beziehungsweise $\Delta U\approx\unit[3]{mV}$ bei Toms Messungen. Die Diskrepanz erklärt sich durch die Wahl unterschiedlicher Messbereiche. Die Messunsicherheit der Frequenz (das Oszilloskop bot eine Funktion zum "`direkten"' Messen von Frequenzen) haben wir zu $\Delta f\approx\unit[0,03]{Hz}$ geschätzt. Lediglich im Bereich höherer Auslenkungen kommt es zur Abweichung der Näherung von den Messwerten -- aufgrund des eingeschränkten Gültigkeitsbereichs der Näherung entspricht dies aber völlig den Erwartungen. Ein oberflächlicher Vergleich mit der in der Anleitung gegebenen (aber leider nicht näher spezifizierten) Kurve ergibt sogar in diesem Bereich eine Übereinstimmung.
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{messwerte/frequenzauslenkung.pdf}
+	\caption{Frequenzen der Pendelbewegung bei unterschiedlichen Auslenkungen}
+	\label{img:freq}
+\end{figure}
+Als nächstes wurden Bifurkationen untersucht. Zuerst wurden feste Parameter vorgegeben, das Pendel in ein Rotationsregime getrieben und dann $\beta\ix{1}$ kontinuierlich verändert, bis sich im stroboskopischen Phasenraumbild eine Periodenverdopplung zeigte. Dies wurde für einen ansonsten festen Parametersatz zweimal getan und dann wurde der Abstand des Pendelgewichts von der Drehachse geändert, um $\Omega$ einen neuen Wert zu geben. Nach erfolgreichem Einschwingen im Rotationsregime wurde auch hier wieder $\beta\ix{1}$ kontinuierlich bis zur Periodenverdopplung verändert. Die Ergebnisse zeigt \ref{img:beef}. Unsere Fehlerberechnung stützt sich auf das Gaußsche Fehlerfortpflanzungsgesetz, das wir mit einem CAS auf die funktionalen Zusammenhänge zwischen normierten Parametern und Messgrößen angewendet haben, um letztlich die eingezeichneten Messfehler zu erhalten. Von der Anleitung wurde an dieser Stelle eine Simulation empfohlen, um die Bifurkationsstellen zu verifizieren oder zumindest mit der Simulation zu vergleichen. Da das vorgeschlagene Programm jedoch in unserem Parameterbereich keine auswertbaren Bifurkationsdiagramme geliefert hat, können wir an dieser Stelle leider keinen Vergleich zur Simulation liefern. Da keine Kenntnisse über den Zusammenhang von $\Omega$ und $\beta\ix{1}$ in der Parameterebene bestehen, kann auch kein Rückschluss auf die Qualität der gewonnenen Messwerte gemacht werden. Nichtsdestotrotz beobachteten  wir für die in \ref{img:beef} gezeigten Werte qualitative Bewegungsänderung des Pendels, was den Erwartung aus den Grundlagen gerecht wird.
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{messwerte/beefurkation.pdf}
+	\caption{Punkte in der $(\Omega;\beta\ix{1})$-Parameterebene, bei denen Bifurkationen auftraten}
+	\label{img:beef}
+\end{figure}
+Um Aussagen über den Vorhersagehorizont machen zu können, war es notwendig, zeitsynchron mit der Phase der Erregung die Auslenkung und die Winkelgeschwindigkeit aufzunehmen. Dies war jedoch bei dem gegebenen Versuchsaufbau nicht möglich, weswegen wiederum kein Vergleich zur Simulation angestellt werden konnte. Wir erhielten keine Referenz für die Aussagen über den Vorhersagehorizont. 
+\section{Quellen}
 \section{Anhang}
 Die originalen Messwert-Aufzeichnungen liegen bei.
 \end{document}
