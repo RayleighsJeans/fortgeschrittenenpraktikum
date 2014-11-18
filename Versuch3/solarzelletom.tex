@@ -67,37 +67,56 @@ Die einfache Solarzelle ist ein Halbleiterbauelement, genauer gesagt: Eine Diode
 \end{wrapfigure}
 Halbleiter sind Stoffe, deren elektrische Leitfähigkeit je nach Anwendungsgebiet mehr oder weniger leicht um Größenordnungen verändert werden kann, zum Beispiel durch Veränderung der Temperatur. Diese Eigenschaft verdanken Halbleitermaterialen ihrem besonderen atomaren Aufbau: Die Bindung der sie ausmachenden Teilchen erfolgt durch die einzigen vier Valenzelektronen dieser Teilchen. Praktisch heißt das, dass es am absoluten Nullpunkt keine freien Ladungsträger im Material gibt, da alle Elektronen entweder zu stark an die Atomrümpfe oder in den Bindungen zu den Nachbarteilchen gebunden sind. Wird dem Material Energie zugeführt, können die Elektronen diese in gewissen Maßen quasi ohne Quantelung aufnehmen, da das Potential, in dem diese Quantenobjekte leben, aufgrund der vielen umgebenden Elektronen (und Atomrümpfe) dicht beieinanderliegende, in guter Näherung kontinuierliche, Energieniveaus zulässt. Diese Tatsache wird im sogenannten Bändermodell berücksichtigt. Demnach können sich die Elektronenenergien in kontinuierlichen, aber voneinander unterscheidbarern, Energiebändern bewegen. Bei Halbleitern ist das bei einer bestimmten Temperatur besetzte Valenzband von dem darauffolgenden, höherenergetischen Leitungsband durch eine Bandlücke getrennt -- in diesem Energiebereich gibt es für die Elektronen keine Zustände; entweder die zugeführten Energiequanten reichen zum Überwinden die Bandlücke und Elektronen können ins höhergelegene Band gelangen oder sie nehmen keine Energie auf und verbleiben im Valenzband. Der "`Unterschied"' zu Isolatoren besteht darin, dass es mit angemessenem technischen Aufwand möglich ist, ausreichend vielen Elektronen die Überwindung der Bandlücke zu ermöglichen (vgl. \ref{img:Eniv}, "`Eigenhalbleiter"').
 \subsection{p-n-Übergang}
-
-\section{Auswertung}
-Als erstes haben wir die Strom-Spannungs-Kennlinie der unbeleuchteten Solarzelle mithilfe einer angeschlossenen Spannungsquelle aufgenommen und festgestellt, dass sie sich in diesem Zustand exakt wie eine Diode verhält. Dann haben wir sie, abgeschirmt vom Umgebungslicht, mit LEDs unterschiedlicher Farben beleuchtet und die Kennlinien in diesen Zuständen aufgenommen. Die Messwerte dazu lassen sich in den Tabellen \ref{tab:rot}, \ref{tab:blau} und \ref{tab:grun} einsehen und wurden in der \ref{img:ssrl} dargestellt, sowie an eine Funktion der Form
+Reine Halbleitermaterialien weisen stets eine gleich große Anzahl (beziehungsweise Anzahldichten) beweglicher negativer (Leitungselektronen) und positiver Ladungsträger (Defektelektronen) auf. Diese Anzahldichten sind im reinen Halbleiter jedoch verhältnismäßig klein, was zu einer unpraktischen Leitfähigkeit führt. Diese Eigenschaft kann durch Einbringung von Fremdatomen ("`Doping"') in großem Maße verändert werden. Beim Doping werden drei- oder fünfwertige Atome in das Kristallgitter des vierwertigen Halbleiters eingeführt, deren verschiedene Elektronenkonfiguration einen direkten Einfluss auf die Anzahldichten der Ladungsträger haben: Werden fünfwertige Atome in den Halbleiter eingeführt, spricht man von einem n-dotierten Halbleiter, da das fünfte Außenelektron eines solchen Atoms nicht an Bindungen teilnehmen kann und somit einen freien negativ geladenen Ladungsträger im Halbleiter darstellt. Dreiwertigen Atomen fehlt hingegen ein Elektron im Vergleich zum Rest des Halbleiters, was der Einführung eines Defektelektrons, eines positiven Ladungsträgers, gleichkommt; beim Doping mit solchen Atomen spricht man daher von p-dotierten Halbleitern. Bringt man nun einen p-dotierten und einen n-dotierten Halbleiter in Kontakt, spricht man bei der Kontaktfläche von einem p-n-Übergang. Durch einen solchen Übergang hindurch diffundieren Defektelektronen vom p-dotierten in den n-dotierten und Leitungselektronen vom n- in den p-dotierten Halbleiter, bis das dadurch entstandene Potential mit der thermischen Energie, die die Diffusion antreibt, im thermodynamischen Gleichgewicht steht. Die dadurch entstandene Spannung $U\ix{Diff}$ hängt von den Anzahldichten von Donator-(fünfwertigen)-Atomen $n\ix{D}$ und Akzeptor-(dreiwertigen)-Atomen $n\ix{A}$ und dem Produkt der ursprünglich im Halbleiter vorhandenen Ladungsträgerkonzentrationen $n\ix{i}=n\cdot p$ und der thermischen Spannung $U\ix{T}=\frac{E\ix{T}}{e}=\frac{k\ix{B}\cdot T}{e}$ ab:
 \begin{align}
-I(U)=I\ix{S}\cdot\left(\exp\left(U\cdot U\ix{T}^{-1}\right)-1\right)-I\ix{F}
+U\ix{Diff}=U\ix{T}\cdot\ln\left(\frac{n\ix{A}\cdot n\ix{D}}{n\ix{i}^2} \right)
+\end{align}
+Diese Diffusionsspannung stellt eine obere Grenze für die an einer Solarzelle abgreifbare Leerlaufspannung $U\ix{L}$ dar.
+\subsection{Übergang zur Solarzelle}
+Eine Solarzelle ist nichts anderes als ein p-n-Übergang zwischen einer dünnen n-dotierten und Halbleiterschicht und einer dickeren, p-dotierten Basis. Trifft nun ein Photon mit einer Energie größer der Bandlücke auf ein Valenzelektron, das sich in der von $U\ix{Diff}$ beeinflussten Zone (der Raumladungszone) befindet, wird es zuerst durch die Energie des Photons ins Leitungsband gehoben, wobei außerdem ein Defektelektron entsteht, und dann von der Potentialdifferenz in die n-dotierte Grenzschicht befördert. Das Defektelektron wandert aus dem gleichen Grunde in die p-dotierte Basis. Durch diese Ladungstrennung lässt sich zwischen Basis und Grenzschicht eine Spannung und bei elektrischer Verbindung dieser beiden Elektroden ein Strom messen. Wie bei jeden Strom- und Spannungs-Quelle ist die abgegriffene Leistung von der Beschaltung abhängig. Ohne Beleuchtung ist die Solarzelle nur eine Diode und sollte sich bei angelegter Spannung entsprechend verhalten -- eine in Sperrichtung geschaltete Spannung vergrößert die Bandlücke und verringert die Leitfähigkeit, während eine in Durchlassrichtung geschaltete Spannung das Gegenteil bewirkt und die Leitfähigkeit drastisch erhöht. Bei Beleuchtung tritt wegen des erläuterten Effekts ein Strom entgegen der Spannungsrichtung auf, da die getrennten Ladungsträger bestrebt sind, über die elektrische Verbindung zu rekombinieren. Dieser Strom ist der sogenannte Fotostrom $I\ix{F}$, der in erster Näherung nur von den Belichtungsverhältnissen abhängt, sodass sich die resultierende Strom-Spannungs-Abhängigkeit der Solarzelle aus einem Diodenteil $I\ix{Diode}$ und $I\ix{F}$ zusammensetzt:
+\begin{align}
+I\ix{Solar}(U)=I\ix{Diode}(U)-I\ix{F}\label{eq:IUbasic}
+\end{align}
+Der Fotostrom ist abhängig von der Energie der einfallenden Strahlung $E\ix{opt}$, der aufgenommenen Strahlungsleistung $P\ix{opt}$ und dem Wirkungsgrad der Solarzelle für eine bestimmte Wellenlänge $\eta\ix{opt}(\lambda)$:
+\begin{align}
+I\ix{F}=\eta\ix{opt}\cdot e\cdot \frac{P\ix{opt}}{E\ix{opt}}=\eta\ix{opt}\cdot \frac{e\cdot\lambda}{h\cdot c}\cdot P\ix{opt}
+\end{align}
+\section{Auswertung}
+Als erstes haben wir die Strom-Spannungs-Kennlinie der unbeleuchteten Solarzelle mithilfe einer angeschlossenen Spannungsquelle aufgenommen und festgestellt, dass sie sich in diesem Zustand exakt wie eine Diode verhält. Dann haben wir sie, abgeschirmt vom Umgebungslicht, mit LEDs unterschiedlicher Farben beleuchtet und die Kennlinien in diesen Zuständen aufgenommen. Die Messwerte dazu lassen sich in den Tabellen \ref{tab:rot}, \ref{tab:blau} und \ref{tab:grun} einsehen und wurden in der \ref{img:ssrl} dargestellt, sowie an eine Funktion der Form (vgl. Gleichung (\ref{eq:IUbasic}))
+\begin{align}
+I(U)=I\ix{S}\cdot\left(\exp\left(U\cdot U\ix{T}^{-1}\right)-1\right)-I\ix{F}\label{eq:IUenhanced}
 \end{align}
 mittels nichtlinearer Methode der kleinsten Quadrate in den Parametern $I\ix{S}$, $U\ix{T}$ angepasst. Den Parameter $I\ix{F}$ haben wir aus den Messwerten abgelesen.
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{messwerte/stromspannungspannungsrichtigled.pdf}
+	\vspace{-2em}
 	\caption{Diagramm: Beleuchtung mit LEDs} \label{img:ssrl}
 \end{figure}
-Nach dieser Messung haben wir anstelle der Spannungsquelle einen ohmschen Dekadenwiderstand (eine Last) geschaltet und unter Veränderung des Widerstands den Strom und die Spannung gemessen. Diese Messwerte wurden in den Tabellen \ref{tab:rotb} und \ref{tab:blaub} zusammengetragen und in \ref{img:ssrbl} veranschaulicht und wie zuvor an eine Funktion angepasst. Man sieht bereits im Diagramm die starke Abweichung der Messwerte der roten LED von der angepassten Kurve, was sich auch in den Fit-Parametern ausdrückt, die Größenordnungen von den übrigen Werten entfernt sind. Diese Messung wird demnach in den folgenden Betrachtungen der Vollständigkeit halber mit aufgeführt, aber ansonsten ignoriert.
+Nach dieser Messung haben wir anstelle der Spannungsquelle einen ohmschen Dekadenwiderstand (eine Last) geschaltet und unter Veränderung des Widerstands den Strom und die Spannung gemessen. Diese Messwerte wurden in den Tabellen \ref{tab:rotb} und \ref{tab:blaub} zusammengetragen und in \ref{img:ssrbl} veranschaulicht und wie zuvor an eine Funktion angepasst. Man sieht bereits im Diagramm die starke Abweichung der Messwerte der roten LED von der angepassten Kurve, was sich auch in den Fit-Parametern ausdrückt, die Größenordnungen von den übrigen Werten entfernt sind. Diese Messung wird demnach in den folgenden Betrachtungen nur der Vollständigkeit halber mit aufgeführt, aber ansonsten ignoriert.
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{messwerte/stromspannungspannungsrichtigbelastungled.pdf}
+	\vspace{-2em}
 	\caption{Diagramm: LEDs unter Belastung} \label{img:ssrbl}
 \end{figure}
 Gleiches wurde bei Beleuchtung durch eine starke Glühlampe und unter Sonneinstrahlung getan, die Messwerte dazu finden sich in \ref{tab:lampe} bis \ref{tab:sonne} und das zugehörige Diagramm ist \ref{img:sslus}.
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{messwerte/stromspannunglampeundsonne.pdf}
+	\vspace{-2em}
 	\caption{Diagramm: Sonne und Lampe} \label{img:sslus}
+	\vspace{-1em}
 \end{figure}
-Durch den Vergleich der Beziehungen über Fotostrom und den Strom durch die Solarzelle mit den Strom-Spannungs-Charakteristiken fällt sofort auf, dass $\eta\ix{opt}$ stark von $\lambda$, also der Art der Beleuchtung, abhängen muss. $I\ix{F}$ wächst bei fallender Wellenlänge an. Weiterhin beeinträchtigen Schwankungen in der Temperatur die Güte der Messung. Besonders in \ref{img:ssrl} ist die Diskrepanz zwischen exponentieller Form und der gemessenen Kurve im dritten Quadranten gut zu erkennen. Dort könnte der Strom eine Erwärmung und damit eine in der Funktion nich berücksichtigte Schwankung der Parameter hervorgerufen haben.\\
-Entgegen der Theorie, in welcher die Charakteristiken von belasteter und unbelasteter Solarzelle für gleiche Beleuchtungen zusammenfallen, konnte kein solches Verhalten beobachtet werden. Jedoch finden wir bemerkenswert, dass sämtliche Fit-Parameter (bis auf die bereits genannte Ausnahme) ungefähr in der selben Größenordnung liegen. Die Messungen mit der blauen LED und der Lampe haben in den charakteristischen Faktoren (Tabelle \ref{tab:faktoren}) sogar eine recht gute Übereinstimmung.\\
-Die maximal nutzbare Leistung habe wir durch die Ableitung der Leistung $P=I\cdot U$ nach der Spannung festgestellt. Dafür haben wir die in den Fits erhaltenen Funktionen $I(U)$ benutzt. Da die analytische Lösung der Gleichung $\frac{\diff P}{\diff U}=0$ sich als schwierig erweist und bei unserer Messgenauigkeit auch keinen Vorteil gegenüber einer grafischen Lösungsmethode bringt, haben wir die Funktion $\frac{\diff P}{\diff U}$ in einem kleinen Bereich um $\unit[0]{A}$ aufgetragen und den Nulldurchgang abgelesen. Diese Spannung konnten wir nun wiederum in $I(U)\cdot U$ einsetzen, um die maximale Leistung zu berechnen -- die Ergebnisse sind auch in Tabelle \ref{tab:fits} eingetragen. Sowohl die Nulldurchgänge der Leistungsableitung, als auch die daraus berechneten Maximalleistungen, liegen bei den unter Last und mit der Spannungsquelle vorgenommenen Messungen dicht beieinander.
+Durch den Vergleich der Beziehungen über Fotostrom und den Strom durch die Solarzelle mit den Strom-Spannungs-Charakteristiken fällt sofort auf, dass $\eta\ix{opt}$ stark von $\lambda$, also der Art der Beleuchtung, abhängen muss. $I\ix{F}$ wächst bei fallender Wellenlänge an. Weiterhin beeinträchtigen Schwankungen in der Temperatur die Güte der Messung. Besonders in \ref{img:ssrl} ist die Diskrepanz zwischen exponentieller Form und der gemessenen Kurve im dritten Quadranten gut zu erkennen. Dort könnte der Strom eine Erwärmung und damit eine in Gleichung (\ref{eq:IUenhanced}) nich berücksichtigte Schwankung der Parameter hervorgerufen haben.\\
+Entgegen der Theorie, in welcher die Charakteristiken von belasteter und unbelasteter Solarzelle für gleiche Beleuchtungen zusammenfallen, konnte kein solches Verhalten unmittelbar beobachtet werden. Jedoch finden wir bemerkenswert, dass fast alle Datensätze (bis auf die bereits genannte Ausnahme) Fit-Parameter in ungefähr der selben Größenordnung liefern. Die Messungen mit der blauen LED und der Lampe haben in den charakteristischen Faktoren (Tabelle \ref{tab:faktoren}) sogar eine recht gute Übereinstimmung.\\
+Die maximal nutzbare Leistung haben wir durch die Ableitung der Leistung $P=I\cdot U$ nach der Spannung festgestellt. Dafür haben wir die in den Fits erhaltenen Funktionen $I(U)$ benutzt. Da die analytische Lösung der Gleichung $\frac{\diff P}{\diff U}=0$ sich als schwierig erweist und bei unserer Messgenauigkeit auch keinen Vorteil gegenüber einer grafischen Lösungsmethode bringt, haben wir die Funktion $\frac{\diff P}{\diff U}$ in einem kleinen Bereich um $\unit[0]{A}$ aufgetragen und den Nulldurchgang abgelesen, wie in \ref{img:maxleistung} zu sehen ist (die beinahe senkrechten Linien kommen durch den kleinen Wertebereich zustande). Diese Spannung konnten wir nun wiederum in $I(U)\cdot U$ einsetzen, um die maximale Leistung zu berechnen -- die Ergebnisse sind auch in Tabelle \ref{tab:fits} eingetragen. Sowohl die Nulldurchgänge der Leistungsableitung, als auch die daraus berechneten Maximalleistungen, liegen bei den unter Last und mit der Spannungsquelle vorgenommenen Messungen dicht beieinander.
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{messwerte/leistungsmaxima.pdf}
+	\caption{Ableitung der abgegriffenen Leistung über Spannung in einem kleinen Wertebereich}
+	\label{img:maxleistung}
 \end{figure}
 \begin{table}[H]
 	\begin{align*}
 	\begin{array}{c|c|c|c|c|c}
-		\text{Bedingungen} & \unit[I\ix{S}]{/\text{\greek{μ}}A} & \unit[U\ix{T}^{-1}]{/V}  & \unit[I\ix{F}]{/\text{\greek{µ}}A} & \unit[U\ix{L}]{/V} & \unit[P\ix{max}]{/\text{\greek{µ}}W} \\ \hline
+		\text{Bedingungen} & \unit[I\ix{S}]{/\text{\greek{μ}}A} & \unit[U\ix{T}^{-1}]{/V^{-1}}  & \unit[I\ix{F}]{/\text{\greek{µ}}A} & \unit[U\ix{L}]{/V} & \unit[P\ix{max}]{/\text{\greek{µ}}W} \\ \hline
 		\text{rote LED} & 6,281 & 1,560 & 473,0 & 2,777 & -412,491 \\
 		\text{blaue LED} & 1,770 & 1,869 & 2322,0 & 3,841 & -5584,089 \\
 		\text{grüne LED} & 4,544 & 1,625 & 1009,0 & 3,327 & -1895,289 \\
@@ -475,6 +494,7 @@ Die maximal nutzbare Leistung habe wir durch die Ableitung der Leistung $P=I\cdo
 	\end{align*}
 	\vspace{-1em}
 	\caption{Messwerte bei Beleuchtung mit der Lampe}
+	\vspace{-1em}
 	\label{tab:lampe}
 \end{table}
 \begin{table}[H]
@@ -511,6 +531,7 @@ Die maximal nutzbare Leistung habe wir durch die Ableitung der Leistung $P=I\cdo
 	\end{align*}
 	\vspace{-1em}
 	\caption{Messwerte bei Beleuchtung mit der Lampe unter angegebener Belastung}
+	\vspace{-1em}
 	\label{tab:lampeb}
 \end{table}
 \begin{table}[H]
@@ -565,8 +586,12 @@ Die maximal nutzbare Leistung habe wir durch die Ableitung der Leistung $P=I\cdo
 \end{align*}
 \vspace{-1em}
 \caption{Messwerte "`in der Sonne"' unter angegebener Belastung}
+\vspace{-1em}
 \label{tab:sonne}
 \end{table}
 \section{Quellen}
-\ref{img:Eniv}: \url{https://de.wikipedia.org/wiki/Datei:Energy_band_model_(DE).svg} (Urheber: Wikipedia-Benutzer Cepheiden)
+\ref{img:Eniv}: \url{https://de.wikipedia.org/wiki/Datei:Energy_band_model_(DE).svg} (Urheber: Wikipedia-Benutzer \textsc{Cepheiden})\\
+\url{https://de.wikipedia.org/wiki/Solarzelle}\\
+\url{https://de.wikipedia.org/wiki/Halbleiter}\\
+Versuchsanleitung "`Solarzellen"'
 \end{document}
