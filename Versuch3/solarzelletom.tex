@@ -69,17 +69,30 @@ Halbleiter sind Stoffe, deren elektrische Leitfähigkeit je nach Anwendungsgebie
 \subsection{p-n-Übergang}
 
 \section{Auswertung}
+Als erstes haben wir die Strom-Spannungs-Kennlinie der unbeleuchteten Solarzelle mithilfe einer angeschlossenen Spannungsquelle aufgenommen und festgestellt, dass sie sich in diesem Zustand exakt wie eine Diode verhält. Dann haben wir sie, abgeschirmt vom Umgebungslicht, mit LEDs unterschiedlicher Farben beleuchtet und die Kennlinien in diesen Zuständen aufgenommen. Die Messwerte dazu lassen sich in den Tabellen \ref{tab:rot}, \ref{tab:blau} und \ref{tab:grun} einsehen und wurden in der \ref{img:ssrl} dargestellt, sowie an eine Funktion der Form
+\begin{align}
+I(U)=I\ix{S}\cdot\left(\exp\left(U\cdot U\ix{T}^{-1}\right)-1\right)-I\ix{F}
+\end{align}
+mittels nichtlinearer Methode der kleinsten Quadrate in den Parametern $I\ix{S}$, $U\ix{T}$ angepasst. Den Parameter $I\ix{F}$ haben wir aus den Messwerten abgelesen.
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{messwerte/stromspannungspannungsrichtigled.pdf}
 	\caption{Diagramm: Beleuchtung mit LEDs} \label{img:ssrl}
 \end{figure}
+Nach dieser Messung haben wir anstelle der Spannungsquelle einen ohmschen Dekadenwiderstand (eine Last) geschaltet und unter Veränderung des Widerstands den Strom und die Spannung gemessen. Diese Messwerte wurden in den Tabellen \ref{tab:rotb} und \ref{tab:blaub} zusammengetragen und in \ref{img:ssrbl} veranschaulicht und wie zuvor an eine Funktion angepasst. Man sieht bereits im Diagramm die starke Abweichung der Messwerte der roten LED von der angepassten Kurve, was sich auch in den Fit-Parametern ausdrückt, die Größenordnungen von den übrigen Werten entfernt sind. Diese Messung wird demnach in den folgenden Betrachtungen der Vollständigkeit halber mit aufgeführt, aber ansonsten ignoriert.
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{messwerte/stromspannungspannungsrichtigbelastungled.pdf}
 	\caption{Diagramm: LEDs unter Belastung} \label{img:ssrbl}
 \end{figure}
+Gleiches wurde bei Beleuchtung durch eine starke Glühlampe und unter Sonneinstrahlung getan, die Messwerte dazu finden sich in \ref{tab:lampe} bis \ref{tab:sonne} und das zugehörige Diagramm ist \ref{img:sslus}.
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{messwerte/stromspannunglampeundsonne.pdf}
 	\caption{Diagramm: Sonne und Lampe} \label{img:sslus}
+\end{figure}
+Durch den Vergleich der Beziehungen über Fotostrom und den Strom durch die Solarzelle mit den Strom-Spannungs-Charakteristiken fällt sofort auf, dass $\eta\ix{opt}$ stark von $\lambda$, also der Art der Beleuchtung, abhängen muss. $I\ix{F}$ wächst bei fallender Wellenlänge an. Weiterhin beeinträchtigen Schwankungen in der Temperatur die Güte der Messung. Besonders in \ref{img:ssrl} ist die Diskrepanz zwischen exponentieller Form und der gemessenen Kurve im dritten Quadranten gut zu erkennen. Dort könnte der Strom eine Erwärmung und damit eine in der Funktion nich berücksichtigte Schwankung der Parameter hervorgerufen haben.\\
+Entgegen der Theorie, in welcher die Charakteristiken von belasteter und unbelasteter Solarzelle für gleiche Beleuchtungen zusammenfallen, konnte kein solches Verhalten beobachtet werden. Jedoch finden wir bemerkenswert, dass sämtliche Fit-Parameter (bis auf die bereits genannte Ausnahme) ungefähr in der selben Größenordnung liegen. Die Messungen mit der blauen LED und der Lampe haben in den charakteristischen Faktoren (Tabelle \ref{tab:faktoren}) sogar eine recht gute Übereinstimmung.\\
+Die maximal nutzbare Leistung habe wir durch die Ableitung der Leistung $P=I\cdot U$ nach der Spannung festgestellt. Dafür haben wir die in den Fits erhaltenen Funktionen $I(U)$ benutzt. Da die analytische Lösung der Gleichung $\frac{\diff P}{\diff U}=0$ sich als schwierig erweist und bei unserer Messgenauigkeit auch keinen Vorteil gegenüber einer grafischen Lösungsmethode bringt, haben wir die Funktion $\frac{\diff P}{\diff U}$ in einem kleinen Bereich um $\unit[0]{A}$ aufgetragen und den Nulldurchgang abgelesen. Diese Spannung konnten wir nun wiederum in $I(U)\cdot U$ einsetzen, um die maximale Leistung zu berechnen -- die Ergebnisse sind auch in Tabelle \ref{tab:fits} eingetragen. Sowohl die Nulldurchgänge der Leistungsableitung, als auch die daraus berechneten Maximalleistungen, liegen bei den unter Last und mit der Spannungsquelle vorgenommenen Messungen dicht beieinander.
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{messwerte/leistungsmaxima.pdf}
 \end{figure}
 \begin{table}[H]
 	\begin{align*}
@@ -92,10 +105,10 @@ Halbleiter sind Stoffe, deren elektrische Leitfähigkeit je nach Anwendungsgebie
 		\text{blau; belastet} & 5,221 & 1,556 & 2500,0 & 3,966 & -5885,519 \\
 		\text{Lampe} & 12,6 & 1,968 & 5,41\tenpo{4} & 4,248 & -1,512\tenpo{5} \\
 		\text{Lampe; belastet} & 0,485 & 2,715 & 6,6\tenpo{4} & 4,353 & -2,082\tenpo{5} \\
-		\text{Sonne; belastet} & 0,0618 & 2,649 & 1,5\tenpo{4} & 4,679 & -5,147\tenpo{4} \\
+		\text{Sonne; belastet} & 6,18\tenpo{-2} & 2,649 & 1,5\tenpo{4} & 4,679 & -5,147\tenpo{4} \\
 	\end{array}
 	\end{align*}
-	\caption{Fitparameter der unter \ref{img:ssrl} bis \ref{img:sslus} gezeigten Graphen} \label{tab:fits}
+	\caption{Fitparameter und maximale Leistung für \ref{img:ssrl} bis \ref{img:sslus}} \label{tab:fits}
 \end{table}
 \begin{table}[H]
 	\begin{align*}
@@ -184,6 +197,7 @@ Halbleiter sind Stoffe, deren elektrische Leitfähigkeit je nach Anwendungsgebie
 \end{align*}
 \vspace{-1em}
 \caption{Messwerte bei Beleuchtung mit der roten LED}
+\label{tab:rot}
 \end{table}
 
 
@@ -239,6 +253,7 @@ Halbleiter sind Stoffe, deren elektrische Leitfähigkeit je nach Anwendungsgebie
 	\end{align*}
 	\vspace{-1em}
 	\caption{Messwerte bei Beleuchtung mit der roten LED unter angegebener Belastung}
+	\label{tab:rotb}
 \end{table}
 \begin{table}[H]
 	\begin{align*}
@@ -300,6 +315,7 @@ Halbleiter sind Stoffe, deren elektrische Leitfähigkeit je nach Anwendungsgebie
 \end{align*}
 \vspace{-1em}
 \caption{Messwerte bei Beleuchtung mit der blauen LED}
+\label{tab:blau}
 \end{table}
 
 \begin{table}[H]
@@ -357,6 +373,7 @@ Halbleiter sind Stoffe, deren elektrische Leitfähigkeit je nach Anwendungsgebie
 \end{align*}
 \vspace{-1em}
 \caption{Messwerte bei Beleuchtung mit der blauen LED unter angegebener Belastung}
+\label{tab:blaub}
 \end{table}
 
 \begin{table}[H]
@@ -411,6 +428,7 @@ Halbleiter sind Stoffe, deren elektrische Leitfähigkeit je nach Anwendungsgebie
 	\end{align*}
 	\vspace{-1em}
 	\caption{Messwerte bei Beleuchtung mit der grünen LED}
+	\label{tab:grun}
 \end{table}
 
 \begin{table}[H]
@@ -457,6 +475,7 @@ Halbleiter sind Stoffe, deren elektrische Leitfähigkeit je nach Anwendungsgebie
 	\end{align*}
 	\vspace{-1em}
 	\caption{Messwerte bei Beleuchtung mit der Lampe}
+	\label{tab:lampe}
 \end{table}
 \begin{table}[H]
 	\begin{align*}
@@ -492,6 +511,7 @@ Halbleiter sind Stoffe, deren elektrische Leitfähigkeit je nach Anwendungsgebie
 	\end{align*}
 	\vspace{-1em}
 	\caption{Messwerte bei Beleuchtung mit der Lampe unter angegebener Belastung}
+	\label{tab:lampeb}
 \end{table}
 \begin{table}[H]
 	\begin{align*}
@@ -545,8 +565,8 @@ Halbleiter sind Stoffe, deren elektrische Leitfähigkeit je nach Anwendungsgebie
 \end{align*}
 \vspace{-1em}
 \caption{Messwerte "`in der Sonne"' unter angegebener Belastung}
+\label{tab:sonne}
 \end{table}
-\subsection{Grafiken}
 \section{Quellen}
 \ref{img:Eniv}: \url{https://de.wikipedia.org/wiki/Datei:Energy_band_model_(DE).svg} (Urheber: Wikipedia-Benutzer Cepheiden)
 \end{document}

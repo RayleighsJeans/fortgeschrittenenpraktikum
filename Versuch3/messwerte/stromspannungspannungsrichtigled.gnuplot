@@ -20,11 +20,11 @@ Igrun(x) ls 4 lc 2 title "Fit der grünen LED", "stromspannungspannungsrichtigro
 "stromspannungspannungsrichtigblau.data" u 1:2 lt 2 lc 3 title "Messwerte: blaue LED", \
 "stromspannungspannungsrichtiggruen.data" u 1:2 lt 3 lc 2 title "Messwerte: grüne LED"
 set output "stromspannungspannungsrichtigbelastungled.svg"
-Irotb(u)=arotb*(exp(u*brotb)-1.)-crotb
+Irotb(u)=arotb*(exp(u*brotb)-1)-crotb
 Iblaub(u)=ablaub*(exp(u*bblaub)-1.)-cblaub
 crotb=440.
 cblaub=2500.
-fit Irotb(x) "stromspannungsunterbelastungrot.data" u 1:2 via arotb,brotb
+fit Irotb(x) "stromspannungsunterbelastungrot.data" u 1:2 via arotb,brotb,crotb
 fit Iblaub(x) "stromspannungsunterbelastungblau.data" u 1:2 via ablaub,bblaub
 p [-4:5] [-3000:6000] "stromspannungsunterbelastungrot.data" u 1:2 lt 1 lc 1 title "Messwerte: rote LED (Belastung)", \
 "stromspannungsunterbelastungblau.data" u 1:2 lt 2 lc 3 title "Messwerte: blaue LED (Belastung)", \

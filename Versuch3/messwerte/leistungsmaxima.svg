@@ -151,8 +151,8 @@
 	<g transform="translate(931.9,57.2)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end">
 		<text><tspan>rote LED; belastet</tspan></text>
 	</g>
-	<path stroke='red'  d='M940.2,52.7 L982.4,52.7 M241.1,454.4 L241.2,280.5 L241.4,66.2 L241.5,16.7  '/>	<use xlink:href='#gpPt1' transform='translate(241.2,280.5) scale(4.50)' color='red'/>
-	<use xlink:href='#gpPt1' transform='translate(241.4,66.2) scale(4.50)' color='red'/>
+	<path stroke='red'  d='M940.2,52.7 L982.4,52.7 M245.2,454.4 L245.3,286.8 L245.5,71.3 L245.5,16.7  '/>	<use xlink:href='#gpPt1' transform='translate(245.3,286.8) scale(4.50)' color='red'/>
+	<use xlink:href='#gpPt1' transform='translate(245.5,71.3) scale(4.50)' color='red'/>
 	<use xlink:href='#gpPt1' transform='translate(961.3,52.7) scale(4.50)' color='red'/>
 </g>
 	</g>
