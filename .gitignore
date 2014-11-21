@@ -1,3 +1,7 @@
+*.blg
+*/*.blg
+*.bbl
+*/*.bbl
 .DS_Store
 Versuch*/.DS_Store
 Versuch*/messwerte/.DS_Store
