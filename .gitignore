@@ -2,9 +2,9 @@
 */*.blg
 *.bbl
 */*.bbl
-.DS_Store
-Versuch*/.DS_Store
-Versuch*/messwerte/.DS_Store
+*/.DS_Store
+*/*/.DS_Store
+*/*/*/.DS_Store
 *~
 template/*.pdf
 template/*.blg
@@ -23,3 +23,4 @@ Versuch*/*.log
 Versuch*/*.toc
 Versuch*/*.synctex.gz
 Versuch*/*.out
+Versuch*/messwerte/*.log
