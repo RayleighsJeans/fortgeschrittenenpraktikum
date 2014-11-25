@@ -143,6 +143,112 @@ wohingegen der radiale Anteil wie folgt aussieht:
 Sofort fällt auf, dass die Winkelanteile der Gleichungen (\ref{eq:wassku}) und (\ref{eq:sph}) und damit auch der Wellenfunktion, beziehungsweise der Funktion des Drucks, identisch sind. Man kann also mit Schallwellen in einer Hohlkugel die Winkelabhängigkeit der Wellenfunktion des Elektrons im Wasserstoffatom modellieren. Die Unterschiede in den Radialanteilen lassen jedoch keine Analogie zwischen den radialen Abhängigkeiten der Wellenfunktion und des Drucks zu.
 \subsubsection{Gebrochene Symmetrie}
 Der sphärische Resonator in unserem Versuch besteht aus zwei halben Hohlkugeln, die zusammengesteckt werden, um eine volle Hohlkugel zu bilden. In die obere Hälfte ist ein Mikrofon integriert, in die untere ein Lautsprecher (und ein Mikrofon; dieses wird jedoch nicht genutzt) und beide haben zur Kontaktebene einen Winkel von $\unit[45]{\degree}$. Bei einer perfekten Kugel wird die Symmetrieachse (die $z$-Achse) durch die Position des Lautsprechers bestimmt, weswegen nur diejenigen Resonanzen angeregt werden können, deren Kugelflächenfunktionen bei $\theta=0$ nicht verschwinden.
-\section{Auswertung}
-\section{Anhang}
+\section{Durchführung}
+\subsection{Röhrenresonanz}
+Zuerst wurde ein Röhrenresonator mittels eines Lautsprechers und eines Mikrofons auf seine Resonanzen untersucht. Der Lautsprecher wurde mit variabler Frequenz betrieben und das Mikrofon-Signal von einem Oszilloskop aufgenommen -- Resonanzen äußerten sich durch Maxima im Ausgangssignal. Die gefundenen Resonanzfreuqenzen wurden für verschiedene Resonatorlängen in \ref{img:resonatorhand} aufgetragen und an lineare Funktionen mittels Methode der kleinsten Quadrate angepasst. Bei kürzeren Resonatoren wurde dabei eine scheinbare Resonanz bei ungefähr $\unit[420]{Hz}$ gefunden, die aber, vor allem vor dem Hintergrund der Theorie, nicht zu den restlichen Werten passt und von uns daher als Fehlmessung eingestuft wurde. Ansonsten wurden die Messwerte exakt von der Theorie vorausgesagt, was sich in den guten linearen Fits widerspiegelt.
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{messwerte/resonanzfrequenzen.pdf}
+	\caption{Resonanzfrequenzen der Röhre bei verschiedenen Längen}\label{img:resonatorhand}
+\end{figure}
+Dann wurden von der Soundkarte eines Computers verschiedene Frequenzen erzeugt und zugleich die Intensitäten über das Mikrofon gemessen. Die Variation der Frequenz erfolgte in $\unit[10]{Hz}$-Schritten und die Messung bestätigt das bereits von Hand bestimmte Resonanzfrequenzspektrum in einer etwas größeren Umgebung. Zum Vergleich wurden in \ref{img:resonatorcomp} auch die Resonanzfrequenzen aus \ref{img:resonatorhand} gekennzeichnet. Wieder zeigt sich die gute Übereinstimmung des Experiments mit der Theorie, da die Intensitätsmaxima stets den gleichen Abstand voneinander aufweisen.
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{messwerte/resonanzfrequenzencomputer.pdf}
+	\caption{Vom Computer gefundende Resonanzen der Röhre bei $L=\unit[600]{mm}$}\label{img:resonatorcomp}
+\end{figure}
+\subsection{Sphärischer Resonator}
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{messwerte/sphaeren0-10kHz.pdf}
+	\caption{Übersichtsspektren für sphärischen Resonator}\label{img:ubersicht}
+\end{figure}
+Beim sphärischen Resonator wurde ähnlich verfahren wie bei der computergestützten Vermessung der Resonanzfrequenzspektren der Röhren. Das Mikrofon konnte gegen den Lautsprecher verschoben werden, sodass ihre "`Achsen"' einen Winkel zwischen $0$ ($\alpha=\unit[180]{\degree}$) und $\unit[90]{\degree}$ ($\alpha=\unit[0]{\degree}$) zueinander einnehmen konnten. \ref{img:ubersicht} zeigt das Ergebnis des Durchlaufs des Frequenzspektrums von $\unit[0]{Hz}$ bis $\unit[10]{kHz}$ in $\unit[10]{Hz}$-Schritten. Die Resonanzen sind hier deutlich an den Intensitätsmaxima zu erkennen; sie können unabhängig von der Mikrofonstellung festgestellt werden. In \ref{img:detail} wurde ein engerer Bereich ($\unit[4,85]{kHz}-\unit[5]{kHz}$) mit einer kleineren Schrittweite ($\unit[0,2]{Hz}$) und zusätzlichen Mikrofonstellungen vermessen. Es zeigt sich, dass das Maximum kurz vor $\unit[5]{kHz}$ eigentlich zwei Maxima beinhaltet, deren Positionen aber nicht von der Mikrofonstellung abhängen, ihre Intensitäten aber schon. Dies ist Grundlage für die \ref{img:l1}, \ref{img:l2} und \ref{img:l3}: Hier wurden die Intensitäten unter verschiedenen Mikrofonstellungen gemessen und über den Winkel zwischen Lautsprecher- und Mikrofonachse $\theta=\arccos\left(\frac{1}{2}\cos\left(\alpha\right)-\frac{1}{2}\right)$ in einer polaren Darstellung mit $r\propto I$ aufgetragen. Die senkrechte Linie bezeichnet dabei die Mikrofonachse ($\theta=0$). Zum Vergleich mit der Theorie sind in den \ref{img:l1y}, \ref{img:l2y} und \ref{img:l3y} die entsprechenden Kugelflächenfunktionen abgebildet. Es lässt sich daraus schließen, dass die $l=1;m=0$-, $l=2;m=0$- und $l=3;m=0$-Zustände jeweils von den Frequenzen $\unit[2300]{Hz}$, $\unit[3700]{Hz}$ und $\unit[4925]{Hz}$ angeregt werden.
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{messwerte/sphaerendetailiertesspektrum.pdf}
+	\caption{Detaillierte Spektren nahe $\unit[5]{kHz}$ für verschiedene Mikrofonpositionen}\label{img:detail}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\begin{subfigure}[h]{0.3\textwidth}
+	\begin{subfigure}[b]{\textwidth}
+		\includegraphics[angle=90,origin=c,width=\textwidth]{messwerte/polarl1.pdf}
+		\caption{gemessen bei $\unit[2300]{Hz}$} \label{img:l1}
+	\end{subfigure}
+	\begin{subfigure}[b]{\textwidth}
+		\includegraphics[width=\textwidth]{Spherical_Harmonics_deg3l1m0.png}
+		\caption{$Y_l^m$ mit $l=1;m=0$} \label{img:l1y}
+	\end{subfigure}
+	\end{subfigure}
+	\begin{subfigure}[h]{0.3\textwidth}
+	\begin{subfigure}[b]{\textwidth}
+		\includegraphics[angle=90,origin=c,width=\textwidth]{messwerte/polarl2.pdf}
+		\caption{gemessen bei $\unit[3700]{Hz}$} \label{img:l2}
+		\end{subfigure}
+		\begin{subfigure}[b]{\textwidth}
+			\includegraphics[width=\textwidth]{Spherical_Harmonics_deg3l2m0.png}
+			\caption{$Y_l^m$ mit $l=2;m=0$} \label{img:l2y}
+			\end{subfigure}
+		\end{subfigure}
+			\begin{subfigure}[h]{0.3\textwidth}
+	\begin{subfigure}[b]{\textwidth}
+		\includegraphics[angle=90,origin=c,width=\textwidth]{messwerte/polarl3.pdf}
+		\caption{gemessen bei $\unit[4925]{Hz}$} \label{img:l3}
+		\end{subfigure}
+		\begin{subfigure}[b]{\textwidth}
+			\includegraphics[width=\textwidth]{Spherical_Harmonics_deg3l3m0.png}
+			\caption{$Y_l^m$ mit $l=3;m=0$} \label{img:l3y}
+			\end{subfigure}
+			\end{subfigure}
+	\caption{oberen: gemessene Intensitäten in Abhängigkeit vom Winkel, unteren: dazu passende $Y_l^m$}\label{img:drehp}
+\end{figure}
+\subsubsection{Gebrochene Symmetrie}
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{messwerte/{abstandsringe1.5-3kHz}.pdf}
+	\caption{Detailliertes Spektrum zwischen $1,5$ und $\unit[3]{kHz}$}\label{img:nosymp1}
+\end{figure}
+Im sphärischen Resonator wurde die Symmetrieachse der Kugelflächenfunktionen von der Lautsprecherachse vorgegeben, weswegen dort nur Resonanzen angeregt werden konnten, deren Amplitude bei $\theta=0$ nicht verschwinden, also nur Zustände mit $m=0$. Zieht man die Hohlkugel durch Abstandsringe auseinander, bildet sich eine Symmetrieachse heraus, die nicht mehr mit der Lautsprecherachse zusammenfällt, sondern mit ihr einen Winkel von $\theta=\unit[45]{\degree}$ einschließt -- in dieser Konfiguration können nun weitere Resonanzen angeregt werden, wie die \ref{img:nosymp1}, \ref{img:nosymp2} und \ref{img:nosymp3} zeigen. Dies bedeutet für die Theorie, dass nun auch Zustände mit $m\neq0$ auftreten.
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{messwerte/{abstandsringe3-4kHz}.pdf}
+	\caption{Detailliertes Spektrum zwischen $3$ und $\unit[4]{kHz}$}\label{img:nosymp2}
+\end{figure}
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{messwerte/{abstandsringe4-5.5kHz}.pdf}
+	\caption{Detailliertes Spektrum zwischen $4$ und $\unit[5,5]{kHz}$}\label{img:nosymp3}
+\end{figure}
+Führt man in dieser Konfiguration die gleichen Messungen wie für \ref{img:drehp} durch, muss beachtet werden, dass man das Mikrofon nun um die Symmetrieachse dreht, also direkt den Polwinkel $\varphi$ variiert. In \ref{img:l1m0} und \ref{img:l1m1} wurde dies getan und in \ref{img:l1m0y} und \ref{img:l1m1y} dazu passende Kugelflächenfunktionen dargestellt. Hier zeigt die schwarze Linie die $\varphi=0$-Stellung an. Wieder sieht man eine Übereinstimmung der Theorie mit dem Experiment; der $l=1;m=0$-Zustand wird von der Frequenz $\unit[2073]{Hz}$ und der $l=1;m=\pm1$-Zustand von der Frequenz $\unit[2249]{Hz}$.
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[h]{0.3\textwidth}
+		\begin{subfigure}[b]{\textwidth}
+			\includegraphics[width=\textwidth]{messwerte/2073Hzl1m0.png}
+			\caption{gemessen bei $\unit[2073]{Hz}$} \label{img:l1m0}
+		\end{subfigure}
+		\begin{subfigure}[b]{\textwidth}
+			\includegraphics[width=\textwidth]{Spherical_Harmonics_deg3l1m0.png}
+			\caption{$Y_l^m$ mit $l=1;m=0$} \label{img:l1m0y}
+		\end{subfigure}
+	\end{subfigure}
+	\begin{subfigure}[h]{0.3\textwidth}
+		\begin{subfigure}[b]{\textwidth}
+			\includegraphics[width=\textwidth]{messwerte/2249Hzl1m+-1.png}
+			\caption{gemessen bei $\unit[2249]{Hz}$} \label{img:l1m1}
+		\end{subfigure}
+		\begin{subfigure}[b]{\textwidth}
+			\includegraphics[width=\textwidth]{Spherical_Harmonics_deg3l1m1.png}
+			\caption{$Y_l^m$ mit $l=1;m=1$} \label{img:l1m1y}
+		\end{subfigure}
+	\end{subfigure}
+	\caption{oberen: gemessene Intensitäten in Abhängigkeit vom Winkel, unteren: dazu passende $Y_l^m$}
+\end{figure}
+\subsection{Gekoppelte Resonatoren}
+Steckt man zwei über ein Loch verbundene sphärische Resonatoren zusammen, simuliert dies die Überlagerung zweier Atomorbitale. Je größer das Loch ist, desto stärker werden die Orbitale überlagert, was sich in der Praxis durch einen kleineren Bindungsabstand ausdrückt. Variiert man diesen Kopplungsparameter, stellt man eine Verschiebung der Resonanzfrequenzen fest, wie man in \ref{img:doppelspek} sieht. Sucht man nun einen Zusammenhang zwischen Kopplungsparameter (hier der Blendendurchmesser $d$) und der Resonanzfrequenz, bietet sich die Darstellung in einem Diagramm an. Unsere Intuition hat uns darauf geführt, einen Wurzelfunktions-Zusammenhang anzunehmen. Eine doppeltlogarithmische Darstellung lieferte tatsächlich eine Gerade, deren Anstieg sich durch eine Anpassung an eine lineare Funktion als $a=0,584$ herausgestellt hat. Die aus den Messwerten hergeleitete Beziehung zwischen Resonanzfrequenz und Kopplungsparameter und der Fit sind in \ref{img:reskopp} dargestellt.
+\begin{figure}[H]
+	\centering\includegraphics[width=\textwidth]{messwerte/doppelsphrenspektrum.pdf}
+	\caption{Spektrum der gekoppelten Sphären bei Veränderung des Blendendurchmessers} \label{img:doppelspek}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{messwerte/resonanzendoppelsphre.pdf}
+	\caption{Resonanzfrequenzen der Doppelsphäre in Abhängikeit vom Blendendurchmesser}\label{img:reskopp}
+\end{figure}
+\section{Quellen}
 \end{document}

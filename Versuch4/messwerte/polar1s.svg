@@ -37,30 +37,30 @@
 </g>
 	<g id="gnuplot_plot_1" ><title>gnuplot_plot_1</title>
 <g style="fill:none; color:red; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
-	<path stroke='black'  d='M189.9,148.1 L189.6,149.7 L188.4,139.7 L187.5,154.9 L182.7,129.0 L173.0,95.8 L157.0,60.5 L141.6,48.3 
-		L126.1,46.4 L112.5,53.1 L104.2,69.4 L116.8,108.3 L161.1,165.8 L155.2,167.1 L92.4,138.3 L41.2,132.6 
-		L28.8,150.1 L22.5,170.4 L20.7,192.0  '/></g>
+	<path stroke='black'  d='M189.9,16.8 L188.7,16.7 L184.8,16.9 L178.6,17.1 L170.1,18.0 L159.6,19.5 L147.5,22.2 L134.2,26.4 
+		L120.0,32.4 L105.3,40.2 L90.6,49.9 L76.5,62.0 L63.0,76.1 L51.0,92.0 L40.3,109.6 L32.1,128.9 
+		L25.7,149.3 L22.0,170.4 L20.7,192.0  '/></g>
 	</g>
 	<g id="gnuplot_plot_2" ><title>gnuplot_plot_2</title>
 <g style="fill:none; color:green; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
-	<path stroke='black'  d='M189.9,236.0 L189.6,234.4 L188.4,244.4 L187.5,229.2 L182.7,255.1 L173.0,288.3 L157.0,323.6 L141.6,335.8 
-		L126.1,337.7 L112.5,331.0 L104.2,314.7 L116.8,275.8 L161.1,218.3 L155.2,217.0 L92.4,245.8 L41.2,251.5 
-		L28.8,234.0 L22.5,213.7 L20.7,192.1  '/></g>
+	<path stroke='black'  d='M189.9,367.3 L188.7,367.4 L184.8,367.2 L178.6,367.0 L170.1,366.1 L159.6,364.6 L147.5,361.9 L134.2,357.7 
+		L120.0,351.7 L105.3,343.9 L90.6,334.2 L76.5,322.1 L63.0,308.0 L51.0,292.1 L40.3,274.5 L32.1,255.2 
+		L25.7,234.8 L22.0,213.7 L20.7,192.1  '/></g>
 	</g>
 	<g id="gnuplot_plot_3" ><title>gnuplot_plot_3</title>
 <g style="fill:none; color:blue; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
-	<path stroke='black'  d='M189.9,148.1 L190.1,149.7 L191.3,139.7 L192.2,154.9 L197.0,129.0 L206.7,95.8 L222.7,60.5 L238.1,48.3 
-		L253.6,46.4 L267.2,53.1 L275.5,69.4 L262.9,108.3 L218.6,165.8 L224.5,167.1 L287.3,138.3 L338.5,132.6 
-		L350.9,150.1 L357.2,170.4 L359.0,192.1  '/></g>
+	<path stroke='black'  d='M189.8,367.3 L191.0,367.4 L194.9,367.2 L201.1,367.0 L209.6,366.1 L220.1,364.6 L232.2,361.9 L245.5,357.7 
+		L259.7,351.7 L274.4,343.9 L289.1,334.2 L303.2,322.1 L316.7,308.0 L328.7,292.1 L339.4,274.5 L347.6,255.2 
+		L354.0,234.8 L357.7,213.7 L359.0,192.1  '/></g>
 	</g>
 	<g id="gnuplot_plot_4" ><title>gnuplot_plot_4</title>
 <g style="fill:none; color:cyan; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
-	<path stroke='black'  d='M189.9,236.0 L190.1,234.4 L191.3,244.4 L192.2,229.2 L197.0,255.1 L206.7,288.3 L222.7,323.6 L238.1,335.8 
-		L253.6,337.7 L267.2,331.0 L275.5,314.7 L262.9,275.8 L218.6,218.3 L224.5,217.0 L287.3,245.8 L338.5,251.5 
-		L350.9,234.0 L357.2,213.7 L359.0,192.1  '/></g>
+	<path stroke='black'  d='M189.9,16.8 L191.0,16.7 L194.9,16.9 L201.1,17.1 L209.6,18.0 L220.1,19.5 L232.2,22.2 L245.5,26.4 
+		L259.7,32.4 L274.4,40.2 L289.1,49.9 L303.2,62.0 L316.7,76.1 L328.7,92.0 L339.4,109.6 L347.6,128.9 
+		L354.0,149.3 L357.7,170.4 L359.0,192.0  '/></g>
 	</g>
 <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
-	<path stroke='black'  d='M189.9,192.1 L359.0,192.1  '/></g>
+	<path stroke='black'  d='M189.9,192.0 L359.0,192.0  '/></g>
 </g>
 </svg>
 
