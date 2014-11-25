@@ -119,7 +119,7 @@ und $\chi_l(r)$ die Lösungen des radialen Anteils von Gleichung (\ref{eq:wassku
 \begin{align}
 -\frac{\hbar^2}{2mr}\partiellz{}{r}\left(r\chi_l\right)-\frac{l(l+1)\hbar^2}{2mr^2}\chi_l--\frac{e^2}{4\pi\varepsilon_0 r}\chi_l=E\chi_l
 \end{align}
-\subsubsection{Analogon: sphärischer akustischer Resonator}
+\subsubsection{Analogon: sphärischer akustischer Resonator}\label{ch:sph}
 Werden Schallwellen in einer Hohlkugel angeregt, folgt der Druck innerhalb der Kugel der Wellengleichung
 \begin{align}
 \partiellz{p}{t}=\frac{1}{\rho\kappa}\vec{\nabla}^2p
@@ -142,7 +142,9 @@ wohingegen der radiale Anteil wie folgt aussieht:
 \end{align}
 Sofort fällt auf, dass die Winkelanteile der Gleichungen (\ref{eq:wassku}) und (\ref{eq:sph}) und damit auch der Wellenfunktion, beziehungsweise der Funktion des Drucks, identisch sind. Man kann also mit Schallwellen in einer Hohlkugel die Winkelabhängigkeit der Wellenfunktion des Elektrons im Wasserstoffatom modellieren. Die Unterschiede in den Radialanteilen lassen jedoch keine Analogie zwischen den radialen Abhängigkeiten der Wellenfunktion und des Drucks zu.
 \subsubsection{Gebrochene Symmetrie}
-Der sphärische Resonator in unserem Versuch besteht aus zwei halben Hohlkugeln, die zusammengesteckt werden, um eine volle Hohlkugel zu bilden. In die obere Hälfte ist ein Mikrofon integriert, in die untere ein Lautsprecher (und ein Mikrofon; dieses wird jedoch nicht genutzt) und beide haben zur Kontaktebene einen Winkel von $\unit[45]{\degree}$. Bei einer perfekten Kugel wird die Symmetrieachse (die $z$-Achse) durch die Position des Lautsprechers bestimmt, weswegen nur diejenigen Resonanzen angeregt werden können, deren Kugelflächenfunktionen bei $\theta=0$ nicht verschwinden.
+Der sphärische Resonator in unserem Versuch besteht aus zwei halben Hohlkugeln, die zusammengesteckt werden, um eine volle Hohlkugel zu bilden. In die obere Hälfte ist ein Mikrofon integriert, in die untere ein Lautsprecher (und ein Mikrofon; dieses wird jedoch nicht genutzt) und beide haben zur Kontaktebene einen Winkel von $\unit[45]{\degree}$. Bei einer perfekten Kugel wird die Symmetrieachse (die $z$-Achse) durch die Position des Lautsprechers bestimmt, weswegen nur diejenigen Resonanzen angeregt werden können, deren Kugelflächenfunktionen bei $\theta=0$ nicht verschwinden. Dies kann durch Erzwingen einer Symmetrieachse, zum Beispiel durch Streckung der Kugel, geändert werden -- die Symmetrieachse ist nun senkrecht zur Kontaktebene und der Lautsprecher kann auch Resonanzen anregen, deren Amplituden auf der Symmetrieachse verschwinden.
+\subsection{Das $\text{H}_2^+$-Molekül}
+Koppelt man zwei sphärische Resonatoren über eine Lochblende miteinander, simuliert man die Überlagerung zweier Systeme, wie sie in \ref{ch:sph} beschrieben sind. Dies kommt in der Natur bei der Bildung von Molekülen vor: Die Kerne der einzelnen Atome bilden zusammen ein Potential aus, das die Wellenfunktionen der Elektronen bestimmt. Beim $\text{H}_2^+$-Molekül sind dies zwei Wasserstoffkerne und da sich nur ein einziges Elektron in diesem System befinden, treten keine Störungen durch Elektron-Elektron-Wechselwirkungen auf und die Überlagerung zweier Wasserstoff-Systeme stelt eine gute Näherung für die Verhältnisse im Molekül dar. Für die Lochblende können hierbei verschiedene Größen gewählt werden, was in der Molekül-Beschreibung einer größeren Kopplung der Systeme, also einem geringeren Kernabstand entspricht.
 \section{Durchführung}
 \subsection{Röhrenresonanz}
 Zuerst wurde ein Röhrenresonator mittels eines Lautsprechers und eines Mikrofons auf seine Resonanzen untersucht. Der Lautsprecher wurde mit variabler Frequenz betrieben und das Mikrofon-Signal von einem Oszilloskop aufgenommen -- Resonanzen äußerten sich durch Maxima im Ausgangssignal. Die gefundenen Resonanzfreuqenzen wurden für verschiedene Resonatorlängen in \ref{img:resonatorhand} aufgetragen und an lineare Funktionen mittels Methode der kleinsten Quadrate angepasst. Bei kürzeren Resonatoren wurde dabei eine scheinbare Resonanz bei ungefähr $\unit[420]{Hz}$ gefunden, die aber, vor allem vor dem Hintergrund der Theorie, nicht zu den restlichen Werten passt und von uns daher als Fehlmessung eingestuft wurde. Ansonsten wurden die Messwerte exakt von der Theorie vorausgesagt, was sich in den guten linearen Fits widerspiegelt.
@@ -250,5 +252,12 @@ Steckt man zwei über ein Loch verbundene sphärische Resonatoren zusammen, simu
 	\includegraphics[width=\textwidth]{messwerte/resonanzendoppelsphre.pdf}
 	\caption{Resonanzfrequenzen der Doppelsphäre in Abhängikeit vom Blendendurchmesser}\label{img:reskopp}
 \end{figure}
+\vspace{-2em}
 \section{Quellen}
+\begin{itemize}
+	\item \url{https://de.wikipedia.org/wiki/Stehende_Welle}
+	\item Vorlesung "`Quantenmechanik I"', gehalten von M. Schlanges im Sommersemester 2014
+	\item \url{https://de.wikipedia.org/wiki/Wellengleichung}
+	\item Versuchsanleitung "`Quantum Analogs"' und beinhaltete Quellen
+\end{itemize}
 \end{document}
