@@ -1,0 +1,83 @@
+\documentclass[numbers=noenddot,12pt,a4paper]{scrartcl}
+\usepackage[greek,ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{libertine}
+\usepackage{ziffer}
+\usepackage{graphicx}
+\usepackage{units}
+\usepackage[infoshow]{tabularx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{wrapfig}
+\usepackage{esint}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage[font=small]{caption}
+\usepackage{subcaption}
+\usepackage{lscape}
+\usepackage{hyperref}
+
+\renewcommand{\thefigure}{Abb. \arabic{figure}}
+
+\captionsetup[wrapfigure]{name=}
+\captionsetup[figure]{name=}
+\newcommand{\degree}{^\circ}
+\newcommand{\diff}{\textnormal{d}}
+\newcommand{\tenpo}[1]{\cdot 10^{#1}}
+\newcommand{\greek}[1]{\greektext#1\latintext}
+\newcommand{\ix}[1]{_\text{#1}}
+\newcommand{\imag}{\mathbf{i}}
+\newcommand{\tilt}[1]{\textit{#1}}
+\newcommand{\grad}[1]{\textit{grad}\left(#1\right)}
+\newcommand{\divergenz}[1]{\textit{div}\left(#1\right)}
+\newcommand{\euler}{\mathnormal{e}}
+\newcommand{\fett}[1]{\textbf{#1}}
+
+\title{Protokoll: Hall-Effekt in Halbleitern}
+\author{\underline{Tom Kranz}, Philipp Hacker}
+\date{\today}
+
+\begin{document}
+%\setcounter{page}{2}
+%\setcounter{section}{1}
+\maketitle
+\begin{center}
+Betreuer: M. von der Ehe\\
+Versuchsdatum: 18.11.2014\\
+\begin{table}[h]
+\centering
+Note: %TODO Gute Note erhalten :)
+\begin{tabularx}{1.5cm}{|X|}
+\hline \\ \\
+\hline
+\end{tabularx}
+\end{table}
+\end{center}
+\vspace*{\fill}
+\tableofcontents
+\vfill
+\newpage
+\section{Motivation}
+Halbleiter sind wichtige Rohstoffe für die moderne Elektronik -- aufgrund ihrer leicht und über viele Größenordnungen hinweg anpassbaren, besonderen elektrischen Eigenschaften finden sie Verwendung in vielen sogenannten aktiven Bauteilen, die nicht nur Effekte der Leitung von Strom ausnutzen, sondern die Stromleitung auf komplexe Weise auch selbst steuern können. Ausschlaggebend für ihre Funktion sind Kenngrößen von Halbleitern wie die Anzahldichten $n$ beziehungsweise $p$ und die Beweglichkeiten $\mu_n$ beziehungsweise $\mu_p$ der freien Ladungsträger und die Bandlücke $E\ix{G}$. Die Messung dieser Größen mittels des Hall-Effekts soll Gegenstand dieses Versuchs sein.
+\section{Grundlagen}
+\subsection{Halbleiter}
+Das Bandmodell weist alle Elektronen eines Festkörpers energetisch sogenannten Bändern zu; Bereichen des Energieniveauschemas, in denen die quantenmechanisch erlaubten Energieniveaus so dicht beeinander liegen, dass man sie innerhalb der Bänder gut durch ein Kontinuumsspektrum nähern kann. Diese Bänder können entweder durch sogenannte Energielücken getrennt sein oder überlappen -- dies bestimmt die grundlegenden elektrischen Eigenschaften des Festkörpers. Da die Elektronen in solchen Systemen nur dann einen Strom bilden können, wenn die verfügbaren Energiebänder nicht entweder völlig belegt oder völlig besetzt sind und weil Energieniveaus im Groben von niedrig- nach hochenergetisch besetzt werden, spricht man bei Festkörpern mit überlappenden Energiebändern, die zwangsweise jeweils nur zu einem Teil belegt sein können, von elektrischen Leitern und bei Festkörpern mit Energielücke zwischen dem letzten belegten und dem ersten unbelegten Band von Isolatoren, da das niedergelegene Band mit den Elektronen des Systems völlig belegt ist und das höhergelegene Band keine Elektronen beinhaltet.\\
+Ist die Energielücke jedoch so klein, dass die Fermiverteilung, die ja die Zustands-/Energie\-verteilung von Fermionen wie dem Elektron bestimmt, im Bereich der Energielücke bei Arbeitstemperatur eine merkliche Aufweichung der Besetzungsverteilung vorhersagt, spricht man von Halbleitern. Typische Größen für Bandlücken von Halbleitern liegen im Bereich weniger Elektronenvolt, so hat Silicium (bei Raumtemperatur) eine Bandlücke von $\unit[1,12]{eV}$, Germanium sogar nur $\unit[0,67]{eV}$.
+\subsubsection{Kenngrößen von Halbleitern}
+Wichtig für ein elektronisches Bauteil ist natürlich dessen elektrische Leitfähigkeit $\sigma$. Bei Halbleitern hängt diese von der Anzahldichte ins Leitungsband übergegangener Elektronen $n$ und ihrer Beweglichkeit $\mu_n$ und der Anzahldichte der im Valenzband nicht besetzten Zustände, den Defektelektronen oder einfach "`Löchern"', $p$ und ihrer Beweglichkeit $\mu_p$ ab:
+\begin{align}
+\sigma=e\cdot\left(n\cdot\mu_n+p\cdot\mu_p\right)
+\end{align}
+%TODO Warum Boltzmann-Verteilung für intrinsische Ladungsdichte?
+%TODO Herleitung E_G aus ln(σ_i)(1/T)
+\subsubsection{Dotierung}
+%TODO Reserve, Erschöpfung, intrinsischer Bereich erläutern
+\subsection{Hall-Effekt}
+\subsubsection{Nutzen für Halbleitertechnik}
+%TODO Hall-Konstante aus n, p Ladungsträgern und μ_n, μ_p herleiten
+\section{Auswertung}
+\section{Quellen}
+%\section{Anhang}
+\end{document}
