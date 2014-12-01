@@ -53,11 +53,11 @@ p "ndotiertwarm.data" u (ln($1+273.15)):(ln((($4*20)/$2)*(-$3*1e-3*h)/(200e-3*$4
 
 set output "beweglichkeitp.svg"
 
-sortp(x,y)=x>5.9 ? y : NaN
+sortp(x,y)=x<5.825 ? y : NaN
 fitp(x)=z*x+o
 fit fitp(x) "pdotiertwarm.data" u (ln($1+273.15)):(sortp((ln($1+273.15)),(ln((($4*20)/$2)*($3*1e-3*h)/(200e-3*$4*1e-3))))) via z,o
 
-p "pdotiertwarm.data" u (ln($1+273.15)):(ln((($4*20)/$2)*($3*1e-3*h)/(200e-3*$4*1e-3))) title "p-dotiert"
+p "pdotiertwarm.data" u (ln($1+273.15)):(ln((($4*20)/$2)*($3*1e-3*h)/(200e-3*$4*1e-3))) title "p-dotiert", fitp(x) title "Fit für den Anstieg"
 
 print "E_G von Germanium ", -m*2*k
 print "R_H, n-dotiert ", rn
