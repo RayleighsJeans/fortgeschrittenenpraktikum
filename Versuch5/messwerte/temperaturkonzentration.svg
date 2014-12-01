@@ -9,7 +9,7 @@
 >
 
 <title>Gnuplot</title>
-<desc>Produced by GNUPLOT 4.6 patchlevel 6 </desc>
+<desc>Produced by GNUPLOT 4.6 patchlevel 5 </desc>
 
 <g id="gnuplot_canvas">
 
@@ -30,10 +30,6 @@
 	<use xlink:href='#gpPt9' id='gpPt10' fill='currentColor' stroke='none'/>
 	<use xlink:href='#gpPt3' id='gpPt11' stroke='currentColor' transform='rotate(45)'/>
 	<use xlink:href='#gpPt11' id='gpPt12' fill='currentColor' stroke='none'/>
-	<filter id='greybox' filterUnits='objectBoundingBox' x='0' y='0' height='1' width='1'>
-	  <feFlood flood-color='lightgrey' flood-opacity='1' result='grey'/>
-	  <feComposite in='SourceGraphic' in2='grey' operator='atop'/>
-	</filter>
 </defs>
 <g style="fill:none; color:white; stroke:black; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
 </g>
@@ -165,7 +161,7 @@
 		<text><tspan> 0.0034</tspan></text>
 	</g>
 	<path stroke='black'  d='M80.2,16.7 L80.2,436.4 L999.0,436.4 L999.0,16.7 L80.2,16.7 Z  '/>	<g transform="translate(17.6,226.6) rotate(270)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:middle">
-		<text><tspan>ln(n/m</tspan><tspan font-size="9.6pt" dy="-6.00pt">3</tspan><tspan font-size="12.0pt" dy="6.00pt">) bzw. ln(p/m</tspan><tspan font-size="9.6pt" dy="-6.00pt">3</tspan><tspan font-size="12.0pt" dy="6.00pt">)</tspan></text>
+		<text><tspan>ln(n/m</tspan><tspan font-size="9.6pt" dy="-6.00pt">-3</tspan><tspan font-size="12.0pt" dy="6.00pt">) bzw. ln(p/m</tspan><tspan font-size="9.6pt" dy="-6.00pt">-3</tspan><tspan font-size="12.0pt" dy="6.00pt">)</tspan></text>
 	</g>
 	<g transform="translate(539.6,485.9)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:middle">
 		<text><tspan>1/T in K</tspan><tspan font-size="9.6pt" dy="-6.00pt">-1</tspan><tspan font-size="12.0pt" dy="6.00pt"></tspan></text>
