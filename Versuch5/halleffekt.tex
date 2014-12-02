@@ -98,7 +98,7 @@ Bei geeigneter Handhabung der Messwerte, sowie einigen Näherungen bezüglich de
 	\hat{=}&\,a\cdot x+b \nonumber \\
 	\text{mit} \,\,\, x=&\frac{1}{T} \,\,;\,\, a=\frac{E\ix{G}}{2k\ix{B}} \,\,;\,\, b=\frac{1}{2}\left(\ln\left(N^{V}\ix{eff}\right)+\ln\left(N^{L}\ix{eff}\right)\right)+\ln\left(\mu\ix{n}\right)\ln\left(\mu\ix{p}\right) \nonumber
 \end{align}
-\subsubsection{Beweglichkeiten}
+\subsubsection{Beweglichkeiten}\label{ch:beweg}
 Die Beweglichkeiten $\mu\ix{n/p}$ sind Mittelwerte über die besetzten Zustände im Valenz- und Leitungsband. Löcher und Elektronen verhalten sich dabei qualitativ gleich. Es gilt wiederum die Boltzmann-Statistik für die folgenden Mittelwerte ($\tau(\vec{k})$ - Relaxationszeit  des Elektrons am reziproken "`Ort"' $\vec{k}$).
 \begin{align}
 	\mu=\frac{1}{m}\frac{\langle\tau(\vec{k}) v^2(\vec{k})\rangle}{\langle v^2(\vec{k})\rangle}
@@ -234,8 +234,9 @@ Nun wurde bei festem Magnetfeld $B$ und Querstrom $I$ die Temperatur der Kristal
 	\caption{$\ln\left(\unit[n]{\cdot m^3}\right)$ über $\frac{1}{T}$ Diagramm} \label{img:dotierttemperatur}
 \end{figure}
 \subsubsection{Temperaturabhängigkeit der Ladungsträgerbeweglichkeiten}
-Wie in \ref{ch:beweg} bereits erläutert und in \ref{img:beweglichkeit} zu sehen, wird die Beweglichkeit der Ladungsträger durch, hauptsächlich 2 Umstände eingeschränkt: Streuung an Störstellen mit Ladungen und an Quasiteilchen von Gitterschwingungen. Für niedrigere Temperaturen erwarten wir somit, bei einer doppelt-logarithmischen Auftragung, einen Anstieg von $\sim\frac{3}{2}$. Andererseits folgt im bereich hoher Temperaturen ein Anstieg $\sim-\frac{3}{2}$ (siehe Gl. (\ref{eq:beweg2}).\\
-Der Anstieg der Geraden in \ref{img:mu-n}, welche eine lineare Näherung in einem, unter Vergleich mit \ref{img:beweglichkeit} sinnvollen Bereich darstellt, beträgt $-2,316$. Für \ref{img:mu-p} fanden wir einen Anstieg \mbox{von $-3,322$.} Diese Werte weichen stark von den Erwartungen ab.
+Wie in \ref{ch:beweg} bereits erläutert und in \ref{img:beweglichkeit} zu sehen, wird die Beweglichkeit der Ladungsträger durch, hauptsächlich 2 Umstände eingeschränkt: Streuung an Störstellen mit Ladungen und an Quasiteilchen von Gitterschwingungen. Für niedrigere Temperaturen erwarten wir somit, bei einer doppelt-logarithmischen Auftragung, einen Anstieg von $\sim\frac{3}{2}$. Andererseits folgt bei gleicher Verfahrensweise im Bereich hoher Temperaturen ein Anstieg $\sim-\frac{3}{2}$ (siehe Gl. (\ref{eq:beweg2}).\\
+Der Anstieg der Geraden in \ref{img:mu-n}, welche eine lineare Näherung in einem, unter Vergleich mit \ref{img:beweglichkeit} sinnvollen Bereich darstellt, beträgt $-2,316$. Für \ref{img:mu-p} fanden wir einen Anstieg \mbox{von $-3,322$.} Diese Werte weichen stark von den Erwartungen ab. Dies kann u.a. als Ursache haben, dass die erwähnten Zusammenhänge nur grobe Näherungen sind. Weiterhin ist es möglich, dass im betrachteten Temperaturbereich bereits unterschiedliche Effekte die Annahmen für Gl. (\ref{eq:beweg2}) überlagern. Das würde möglicherweise die abweichenden Verläufe der Graphen (Vgl. \ref{img:beweglichkeit}) erklären. Die doppelt-logarithmische Auftragung verstärkt dabei kleine Abweichungen von den Erwartungen über die Zusammenhänge der Beweglichkeiten.\\
+Sieht man einmal von den Unterschieden zur Theorie ab (insbesondere Verlauf der Graphen) so kann man annehmen, dass die Beweglichkeit beider Dotierungen hauptsächlich durch die Streuung am Gitter, und somit Phononen bestimmt wird.
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{messwerte/beweglichkeitn.pdf}
 	\caption{Logarithmus der Beweglichkeit $\mu\ix{n}$ als Funktion des Logartihmus der Temperatur} \label{img:mu-n}
@@ -247,11 +248,11 @@ Der Anstieg der Geraden in \ref{img:mu-n}, welche eine lineare Näherung in eine
 \section{Quellen}
 \begin{itemize}
 	\item{\url{http://de.wikipedia.org/wiki/Bandstruktur}\\ Abschn.: Bandstrukturen realer Festkörper}
-	\item{Festkörperphysik, Vorlesungsskript zur Vorlesung im WS 1998/1999 und SS 1999; Prof. Dr. Rudolf Gross, Dr. Achim Marx\\
+	\item{Festkörperphysik, Skript zur Vorlesung im WS 1998/1999 und SS 1999; Prof. Dr. Rudolf Gross, Dr. Achim Marx\\
 		S.414, Abb. 10.11}
 	\item{Festkörperphysik: Einführung in die Grundlagen; H. Ibach, H. Lüth\\
 	(Springer-Verlag, Berlin, 1993)\\
 		Kap. 12, S.408-423}
-	\item{Festkörperphysik, SS 2014; Prof. Dr. Hippler, Prof. Dr. Münzenberg,\\ \mbox{Dr. von der Ehe (geb. Walter)}\\
+	\item{Festkörperphysik, SS 2014; Prof. Dr. Hippler, Prof. Dr. Münzenberg,\\ \mbox{Dr. von der Ehe}\\
 		Übungsblatt 7, Aufgabe 3}
 \end{itemize}\end{document}
