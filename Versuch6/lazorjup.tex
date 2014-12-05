@@ -36,7 +36,7 @@
 \newcommand{\fett}[1]{\textbf{#1}}
 
 \title{Protokoll: Neodym-dotieter YAG-Laser} %TODO Name des Versuchs eintragen
-\author{Tom Kranz, \underline{Philipp Hacker}} %TODO Protokollschreiber unterstreichen
+\author{Philipp Hacker} %TODO Protokollschreiber unterstreichen
 \date{\today}
 
 \begin{document}
@@ -60,10 +60,24 @@ Note: %TODO Gute Note erhalten :)
 \vfill
 \newpage
 \section{Einleitung}
-1964 wurde in den Bell Laboratories (New Jersey, USA) von \tilt{L. Van Uitert} und \tilt{J. E. Geusic} ein Festkörperlaser auf Grundlage eines Neodym-dotierten Yttrium-Aluminium-Granat-Kristalls entwickelt. Dieser hatte den Vorteil, dass er bei relativen hohen Ausgangsleistungen von einigen hundert $\unit{MW}$ im gepulsten Betrieb einen Laserstrahl mit einer geringen Wellenlänge (hauptsächlich $\unit[1064]{nm}$) aussendet. Weitere günstige Charakteristika dieses Klasse 4 Lasers ergeben sich durch die Anregung mit Laserdioden. Diese haben im Infrarotbereich einen Wirkungsgrad von $\sim70 \%$. Für das optische Pumpen des Mediums nutzt man Dioden mit einer Emissionswellenlänge von $\unit[808]{nm}$, was die Effizienz des \tilt{Nd:YAG}-Lasers auf bis zu $50\%$ steigert. Aufgrund der vielen Möglichkeiten, Halbleiterstrukturen zu verändern, kann man die Schwingung nur einer Mode innerhalb der Diode realisieren. Bei geeigneter Stabilisierung der Parameter Temperatur, Pumpstrom und Material lässt sich eine äußerst geringe Frequenzbandbreite des Lasers einstellen. \\
-Dieser Versuch konzentriert sich auf die Untersuchungen der Eigenschaften des Laser-Mediums \tilt{Nd:YAG} und der Leistung in Abhängigkeit der Anregung und des Aufbaus. 
+1964 wurde in den Bell Laboratories (New Jersey, USA) von \tilt{L. Van Uitert} und \tilt{J. E. Geusic} ein Festkörper-Laser auf Grundlage eines Neodym-dotierten Yttrium-Aluminium-Granat-Kristalls entwickelt. Dieser hatte den Vorteil, dass er bei relativen hohen Ausgangsleistungen von einigen hundert $\unit{MW}$ im gepulsten Betrieb einen Laserstrahl mit einer geringen Wellenlänge (hauptsächlich $\unit[1064]{nm}$) aussendet. Der Nd:YAG kann sowohl mit Lichtquellen kontinuierlicher Spektren oder einer Laser-Diode angeregt werden. Diese haben, bei einer Pump-Wellenlänge von $\unit[808]{nm}$, einen Wirkungsgrad von $\sim0,7\,$. Die Effizienz des Lasers steigert sich dadurch auf bis zu $50\%$.\\ Aufgrund der vielen Möglichkeiten, Halbleiterstrukturen zu verändern, kann man die Anregung nur eines Übergangs innerhalb der zum Pumpen genutzten Diode realisieren. Bei geeigneter Stabilisierung der Parameter Temperatur und Pumpstrom lässt sich somit eine äußerst geringe Frequenzbandbreite des Lasers einstellen. \\
+In diesem Versuch soll sich auf die Untersuchung der Eigenschaften des Laser-Mediums \tilt{Nd:YAG} und der Leistung in Abhängigkeit der Erregung und des Aufbaus konzentriert werden.
+\newpage
 \section{Grundlagen}
+\subsection{Festkörper-Laser}\label{subsec:fklaser}
+Diese Laser (\tilt{\textbf{L}ight \textbf{A}mplification} by \textbf{S}timulated \textbf{E}mission of \textbf{R}adiation), welche aus kristallinen oder amorphen Festkörpern bestehen, können die höchsten Ausgangsleistungen bei den geringsten Impulslängen aller Laser erreichen. Grundsätzlich besteht das Laser-Medium aus einem Kristall (Träger-Medium; hier: YAG), welcher wiederum mit einer bestimmten Dotierung versehen ist (aktives Medium; hier: Neodym), die unter der Pump-Strahlung aktiviert wird. Der entspiegelte Festkörper befindet sich zwischen einem absolut reflektierenden \mbox{(Reflexionskoeffizient $R=1$)} und teildurchlässigen ($R<1$, Transmissionskoeffzient $T>0$) Spiegel, dem sogenannten Resonator. Zusätzlich können hier noch andere optische Bauteile wie z.Bsp. Filter eingebaut werden.\\ Die Ausgangspunkte der Übergänge in den Ionen der Dotierung sind nur d- bzw. f-Orbitale. Da diese keine gemeinsamen Elektronen-Wellenfunktion mit dem umgebenden Kristall haben, d.h. nicht an der Bindung beteiligt sind, können die Eigenschaften des Träger-Mediums in Hinblick auf das Verhalten des Lasers vernachlässigt werden.\\
+Identifiziert man die Energie des Niveaus, welches angeregt werden soll, über die Planck-Konstante mit einer Frequenz $f$ bzw. Wellenlänge $\lambda$, so kann man die nötige Pumplichtfrequenz/-wellenlänge aus der Differenz der Energien von angehobenem und relaxiertem Zustand erhalten. Überlegt man nun, wie die Besetzungsdichten der Zustände sich unter dem Pumpprozess verhalten, so erkennt man schnell, dass das nicht-angeregte Energieniveau an Teilchen unweigerlich verarmen wird. Dies kann nur unter steter Energiezufuhr erzwungen werden, da es dem Streben nach maximaler Entropie eines Systems widerspricht (Besetzungsinversion, siehe \ref{subsec:besetzinv}).\\
+Festkörper-Laser können auf 2 Arten betrieben werden: kontinuierlich -- Pumplicht und Laser-Licht werden ohne vorgegebene Periode emittiert -- und gepulst -- einerseits kann das Pumpen durch getaktete Lichtimpulse erfolgen und andererseits der Resonator des Lasers verändert werden.
+\subsection{Dioden-Laser}\label{subsec:dlaser}
+Am Übergang eines p-dotierten zu einem n-dotierten Halbleiterbauelement kommt es zur Rekombination von positiv geladenen "`Löchern"' und Elektronen unter Einwirkung eines äußeren elektrischen Feldes. Aufgrund der Energiedifferenzen in den Bändern (Überlapp der Wellenfunktion aller Teilchen) der beiden Halbleiterschichten kommt es zur Emission von Photonen. Durch das Anlegen einer äußeren Spannung an die aktive pn-Zone fließen Ladungsträger aus dem n-dotierten in den p-dotierte Halbleiter. Wird der Strom groß genug, d.h. größer als der für den Dioden-Laser charakteristischen Schwellenstrom $I\ix{th}$, so stellt sich eine Besetzungsinversion (siehe \ref{subsec:besetzinv}) zwischen den beiden Schichten ein.
+\\Laserdioden unterscheiden sich somit von herkömmlichen Lasern: nur ein einziges Energieniveau wird angeregt, die Teilchen, welche dieses besetzen, sind unabhängig voneinander und die Ausgangsleistung . Da die Besetzung der Bänder dem thermodynamischen Gleichgewicht nach \tilt{Fermi-Dirac} folgt, ist die Lichtwellenlänge der Laserdiode keine scharf definierte, sondern entspricht einer Distribution von Energien der am Übergang zwischen den Schichten beteiligten Teilchen. Außerdem ist bei Laserdioden zu beachten, dass der Resonator durch die reflektieren/transmittierenden Eigenschaften der zum Einsatz kommenden Halbleiter gegeben ist. Er hat in etwa die Dimension der Wellenlänge des Laserdioden-Lichts.\\ 
+\subsection{Optisches Pumpen}\label{subsec:optpump}
+\subsection{Emission und Besetzungsinversion}\label{subsec:besetzinv}
+\subsection{Der Nd:YAG-Laser}\label{subsec:nd-yag}
 \section{Auswertung}
+
 \section{Quellen}
-%\section{Anhang}
+\begin{itemize}
+	\item{\url{http://de.wikipedia.org/wiki/Festk%C3%B6rperlaser}}	
+\end{itemize}
 \end{document}
