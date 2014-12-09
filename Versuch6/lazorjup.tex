@@ -61,7 +61,7 @@ Note: %TODO Gute Note erhalten :)
 \newpage
 \section{Einleitung}
 1964 wurde in den Bell Laboratories (New Jersey, USA) von \tilt{L. Van Uitert} und \tilt{J. E. Geusic} ein Festkörper-Laser auf Grundlage eines Neodym-dotierten Yttrium-Aluminium-Granat-Kristalls entwickelt. Dieser hatte den Vorteil, dass er bei relativen hohen Ausgangsleistungen von einigen hundert $\unit{MW}$ im gepulsten Betrieb einen Laserstrahl mit einer geringen Wellenlänge (hauptsächlich $\unit[1064]{nm}$) aussendet. Der Nd:YAG kann sowohl mit Lichtquellen kontinuierlicher Spektren oder einer Laser-Diode angeregt werden. Diese haben, bei einer Pump-Wellenlänge von $\unit[808]{nm}$, einen Wirkungsgrad von $\sim0,7\,$. Die Effizienz des Lasers steigert sich dadurch auf bis zu $50\%$.\\ Aufgrund der vielen Möglichkeiten, Halbleiterstrukturen zu verändern, kann man die Anregung nur eines Übergangs innerhalb der zum Pumpen genutzten Diode realisieren. Bei geeigneter Stabilisierung der Parameter Temperatur und Pumpstrom lässt sich somit eine äußerst geringe Frequenzbandbreite des Lasers einstellen. \\
-In diesem Versuch soll sich auf die Untersuchung der Eigenschaften des Laser-Mediums \tilt{Nd:YAG} und der Leistung in Abhängigkeit der Erregung und des Aufbaus konzentriert werden.
+In diesem Versuch soll sich auf die Untersuchung der Eigenschaften des Laser-Mediums \tilt{Nd:YAG} und der Leistung in Abhängigkeit der Erregung und des Aufbaus konzentriert werden. 
 \newpage
 \section{Grundlagen}
 \subsection{Festkörper-Laser}\label{subsec:fklaser}
@@ -113,13 +113,24 @@ Wie bereits angesprochen (in \ref{subsec:fklaser} ) kann eine Besetzungsinversio
 \end{wrapfigure}
 Licht, welches auf ein Medium abgestrahlt wird, ruft eine Anregung hervor und verändert damit die Besetzungen der Zustände, welche mit der Energie der Photonen korrespondieren. Die Absorption (siehe \ref{subsec:besetzinv}) der Teilchen findet nur bei diskreten Frequenzen bzw. Wellenlängen auf den atomaren Energieniveaus der Elektronen der Hülle statt, da die Photonen nur bestimmte Energien $E=\hbar\omega\,$ transportieren. Optisches Pumpen ist somit das Verfahren der spektralen Anregung eines diesbezüglich aktiven Mediums unter Ausnutzung der Besetzungen der Zustände (nach \tilt{Boltzmann}) und der Eigenschaften der Elektronen in den Hüllen. \ref{img:übergänge} zeigt die Übergänge in den Zuständen des Nd:YAG für die jeweiligen Wellenlängen.
 \subsection{Der Nd:YAG-Laser}\label{subsec:ndyag}
-\begin{wrapfigure}[12]{lo}{0.45\textwidth}
-	\centering
-	\includegraphics[width=0.4\textwidth]{vierniveau.png}
-	\caption{4-Niveau-System des Nd:YAG-Lasers}\label{img:4niv}
-\end{wrapfigure}
+
 Der Nd:YAG-Laser wird mit Licht einer Wellenlänge $\sim\unit[810]{nm}$ gepumpt und emittiert hauptsächlich bei $\unit[1064]{nm}$ \ref{img:4niv} und \ref{img:übergänge} stellen das Prinzip der, bei gegebener Dotierung und Pump-Lichtquelle induzierten Übergänge im Laser-Medium dar. Dabei handelt es sich um ein sogenanntes 4-Niveau-System. \\
-Von 1 zu 4: das Pumplicht regt den im Kristall thermisch besiedelten Zustand in einen höheren an. Von 4 zu 3: die sehr schnelle, strahlungslose Relaxation verhindert den Zerfall in den Grundzustand. Diese geschieht meist wegen mechanischen Wechselwirkungen, wie zum Beispiel Stößen. Von 3 zu 2 und zurück: die relevanten Übergänge für das Laser-Licht -- hier finden spontane und induzierte Emission statt, wobei jedoch beide beteiligten Zustände keine thermische Besetzung aufweisen. Unter Umständen kann sogar aus dem Niveau 2 in 3 eine durch Absorption induzierte Anregung stattfinden. Von 2 zu 1: die Relaxation, welche den Ausgangszustand wiederbesiedelt.
+Von 1 zu 4: das Pumplicht regt den im Kristall thermisch besiedelten Zustand in einen höheren an. Von 4 zu 3: die sehr schnelle, strahlungslose Relaxation verhindert den Zerfall in den Grundzustand. Diese geschieht meist wegen mechanischen Wechselwirkungen, wie zum Beispiel Stößen. Von 3 zu 2 und zurück: die relevanten Übergänge für das Laser-Licht -- hier finden spontane und induzierte Emission statt, wobei jedoch beide beteiligten Zustände keine thermische Besetzung aufweisen. Unter Umständen kann sogar aus dem Niveau 2 in 3 eine durch Absorption induzierte Anregung stattfinden. Von 2 zu 1: die Relaxation, welche den Ausgangszustand wiederbesiedelt.\\
+Die charakteristischen Linien der besprochenen Absorptionsübergänge sind in \ref{img:yes} über der Temperatur der Laser-Diode dargestellt. Die dort gezeigten Absorptionspeaks entsprechen gerade einer Energie des Pumplichts und somit einem Übergang im Nd.
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[htbp]{0.49\textwidth}
+	\includegraphics[width=\textwidth]{yes.png}
+	\caption{Absorption des Nd:YAG in Abhängigkeit der Laser-Diodentemperatur}\label{img:yes}
+	\end{subfigure}
+\begin{subfigure}[htbp]{0.49\textwidth}
+	\vspace{-0.3cm}
+	\includegraphics[width=\textwidth]{vierniveau.png}
+	\vspace{0.3cm}
+	\caption{4-Niveau-System des Nd:YAG-Lasers}\label{img:4niv}
+\end{subfigure}
+\caption{Schemata für den Nd:YAG-Laser}
+\end{figure}
 \pagebreak
 \section{Durchführung}\label{sec:durch}
 Den Aufbau des Lasers zeigt \ref{img:aufbau}. Die Laser-Diode \fett{A}, deren Lichtstrahl durch Feinjustierung mit Schrauben nach Bedarf gerichtet werden kann, wird bereits mit Kühleinheit und Temperatursensor montiert. \fett{B} ist ein Kollimator. Dieser parallelisiert das stark divergente Laser-Licht, welches aus der pn-Schicht der Diode austritt. \fett{C} ist ein Linsensystem zur Fokussierung auf das Laser-Medium. Die Einheiten \fett{D}, \fett{K} und \fett{E} bilden den Resonator des Lasers. In \fett{D} selbst ist der stabförmige Nd:YAG-Kristall verbaut. Dieser ist in der Eingangsrichtung für die Wellenlänge $\unit[1064]{nm}$ und in der Ausgangsrichtung für $\unit[532]{nm}$ (1.Oberwelle) stark reflektierend. Das Innere der Module des Resonators ist ebenfalls beschichtet, wodurch der Leistungsverlust minimiert werden soll. Der Strahlengang im Resonator kann wiederum mit Schrauben zur Justierung optimiert werden. Einheit \fett{F} ist ein optischer Filter, welcher zur Absorption bestimmter Spektralbereiche genutzt wird. Mit \fett{G} liegt unser Messsensor in Form eines Photodetektors mit Verstärker vor, welcher schlichtweg in ein Oszilloskop \fett{O} oder ein Multimeter eingespeist wird. \fett{H} in die Steuer-Einheit des Versuchs. Sie zeigt die Temperatur der Pumplichtquelle an und ermöglicht die Variation des Diodenstroms. Weiterhin kann ein kontinuierlicher oder gepulster Modus eingestellt werden, wobei hier noch zwischen interner und der externen Taktung \fett{M} (Frequenzgenerator o.ä.) unterschieden wird.
@@ -135,11 +146,50 @@ Anschließend wird der gesamte Aufbau des Versuchs-Lasers realisiert und optimie
 Zum Schluss Filtert man den Laser-Strahl bis auf seine 1. Oberwelle bei $\unit[532]{nm}$ und untersucht dessen Leistungsabhängigkeit.
 \pagebreak
 \section{Auswertung}\label{sec:auswert}
+\subsection{Aufgabe 1}
+In der Messaufgabe 1 sollte die Ausgangsleistung $P\ix{D}$ der Diode in Abhängigkeit von dem durch sie fließenden Strom $I\ix{D}$ untersucht werden. Man erwartete, wie zuvor angemerkt, das ab einem gewissen Schwellenstrom $I\ix{th}$ die Strahlungsleistung erheblich anwachsen würde, da ab diesem Strom Besetzungsinversion eintritt.\\
+Um einen Zusammenhang über den gemessenen Strom $I\ix{Ph}$ und die Strahlungsleistung $P\ix{Ph}$ zu erhalten, benutzten wir proprietäre Messkurven des Herstellers des Photodetektors (siehe Quellen). Mittels einer linearen Näherung für die Kennlinie unter $\lambda=\unit[1064]{nm}$ erhielten wir somit
+\begin{align}
+	P\ix{Ph}\left(I\ix{Ph}\right)=\unit[0,1175(12)]{\frac{mW}{\mu A}}\cdot I\ix{Ph}-\unit[0,16589(91)]{mW} \,
+\end{align}
+Hat man Kenntnis über die Strahlungsleistung in Abhängigkeit des Detektor-Stroms, so kann man die gewonnen Messdaten in Form von \ref{img:diodleistung} aufbereiten. Gut zu erkennen ist der erwartete lineare Zusammenhang (siehe Versuchsanleitung) und der Ordinatenabschnitt, welcher den Schwellenstrom $I\ix{th}$ darstellt. Dieser ergab sich zu $I\ix{th}=\unit[168,36653(59)]{\mu A}$.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{messwerte/diodenleistung.pdf}
+	\caption{Ausgangsleistung der Diode (eigene Kennlinie) und Fit zur Bestimmung von $I\ix{th}$}\label{img:diodleistung}
+\end{figure}
+\subsection{Aufgabe 2}
+In Messaufgabe 2 sollte das Fluoreszenz des Nd:YAG aufgenommen werden.\\
+Aus den Grundlagen \ref{subsec:dlaser} wissen wir, das für den Betrieb mit einem linearen Diodenstrom-Diodentemperatur-Verlauf Licht mit festen Wellenlängen abgestrahlt werden kann. Deswegen wird hierbei für einen eingestellten Strom die Temperatur der Diode verändert, um so ihr Spektrum zu durchlaufen. Pumpt man so den Laser-Kristall mit den verschiedenen Frequenzen, so lässt sich dessen Fluoreszenzspektrum aufnehmen.\\
+Leider wurde keine Referenzmessung durchgeführt, weswegen man nur mit den Werten für die Strahlungsleistung durch den Nd:YAG-Stab verbleibt (siehe \ref{img:shit}). Der Vergleich mit den Erwartungen aus \ref{img:yes} ermöglicht ebenso keinen Rückschluss auf die Güte der Messung.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{messwerte/fluoreszenz.pdf}
+	\caption{Verbleibende Strahlungsleistung nach Durchgang des Nd:YAG-Stabes in Abhängigkeit von $T$}\label{img:shit}
+\end{figure}
+\subsection{Aufgabe 3}
+Die Lebensdauer des Zustandes $^{4}F_{3/2}$, welcher Licht der Wellenlänge $\unit[1064]{nm}$ aussendet, liegt im Bereich von $\unit[250]{\mu s}$. Diese Zeit muss nach Anregung verstreichen, damit die Intensität dieser Linie im Spektrum gerade auf das $1/e$-fache abgesunken ist. An diesem Abfall ist nur die spontane Emission beteiligt, weswegen ein Zerfallsgesetz bspw. für die Zahl dieser angeregten Zustände angenommen werden kann. Mit Hilfe des Oszilloskops konnte, bei gepulstem Betrieb der Laser-Diode, der Intensitätsverlauf der durch den Nd:YAG gelangten Strahlung beobachtet werden. Ein Filter absorbiert hier zusätzlich die Signale, welche irrelevant für diese Messung sind.\\
+Die Zeitauflösung des Signals erhielten wir durch das \tilt{triggern} mit dem Pulstakt der Laser-Diode. So ergab sich die gesuchte Lebensdauer zu $4,4\cdot\unit[50]{\mu s}=\unit[220]{\mu s}$. Dieser Wert liegt im Bereich des erwarteten.
+\subsection{Aufgabe 5 und 6}
+Hierbei wurde die Leistung des Nd:YAG-Lasers, aufgelöst nach dem Pump-Diodenstrom gemessen. Durch die Kenntnis der Abhängikeit von Strom durch die Laser-Diode und Pumpleistung kann ein Bezug zwischen $P\ix{Nd:YAG}$ und $P\ix{D}$ hergestellt werden. Hierfür ist ein, in großen Bereichen linearer Zusammenhang zu erwarten. In der Nähe der Ordinate sollte eine Abweichung auftreten, da nun der Strom, für welchen Besetzungsinversion in der Diode \underline{und} im Nd:YAG eintritt verschieden von dem bereits diskutierten $I\ix{th}$ ist.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{messwerte/laserleistung.pdf}
+	\caption{Leistung des Lasers in Abhängigkeit der Pumpleistung bei konst. Temperatur}\label{img:grundwelle}
+\end{figure}
+Eine lineare Näherung (im geeigneten Bereich) lässt den Vergleich zwischen der Leistung der 1. Oberwelle in \ref{img:oberwelle} und der Grundwelle aus \ref{img:grundwelle} zu.\\
+Für die Messung der 1. Oberwelle baut man in den Strahlengang des Lasers einen Kristall ein, dessen Eigenschaften gerade eine Frequenzverdopplung bei Durchgang einer elektromagnetischen Welle hervorrufen. Was damit schließlich im Detektor, nach Filterung des Pumpspektrums ankommt, ist die 1. Oberwelle der charakteristischen $\unit[1064]{nm}$-Linie, welche $\unit[532]{nm}$ entspricht. Die Strahlungsleistung dieser Welle sollte etwa $P\ix{2f}\sim P\ix{f}^2$ sein, d.h. quadratisch mit der Grundwellenleistung gehen.\\
+Wie in \ref{img:oberwelle} und \ref{img:grundwelle} gut gesehen werden kann, können die Erwartungen bestätigt werden.
+\begin{figure}[H]
+ 	\centering
+ 	\includegraphics[width=\textwidth]{messwerte/lasergreun.pdf}
+ 	\caption{Leistung der 1. Oberwelle in Abhängigkeit der Leistung der Grundwelle}\label{img:oberwelle}
+\end{figure}
+\pagebreak
 \section{Quellen}
-\begin{itemize}
-	\item{\url{http://de.wikipedia.org/wiki/Festk%C3%B6rperlaser}}
-	\item{\url{http://de.wikipedia.org/wiki/Besetzungsinversion}}
-	\item{\url{http://de.wikipedia.org/wiki/Laserdiode}}
-	\item{\url{http://www.o-heinz.de/Deutsch/Hochschule/Download/Manual_L6.pdf}}
-\end{itemize}
+	\url{http://de.wikipedia.org/wiki/Festk%C3%B6rperlaser}\newline\newline
+	\url{http://de.wikipedia.org/wiki/Besetzungsinversion}\newline\newline
+	\url{http://de.wikipedia.org/wiki/Laserdiode}\newline\newline
+	\url{http://www.o-heinz.de/Deutsch/Hochschule/Download/Manual_L6.pdf}\newline\newline
+	\url{http://www.dlf.ug.edu.pl/wp-content/uploads/2014/03/Miernik-mocy.pdf}\newline\newline
 \end{document}
