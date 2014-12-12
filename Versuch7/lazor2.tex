@@ -60,6 +60,8 @@ Note: %TODO Gute Note erhalten :)
 \vfill
 \newpage
 \section{Einleitung}
+Schon 1814 beobachtete \tilt{J. Fraunhofer} charakteristisch Linien im Lichtspektrum der Sonne. Diese sollten schließlich Rückschlüsse auf deren Zusammensetzung und atomare Zustände zulassen. Die Untersuchung der Wechselwirkung von Materie mit elektromagnetischer Strahlung ist gerade deswegen eine der wichtigsten Methoden der Physik. Die Analyse eines Strahlungsfeldes in Hinblick auf das Energiespektrum einer Probe sei die Spektroskopie. Die Grundlagen spektroskopischer Messmethoden umfassen von geometrischer Optik bis hin zur quantenmechanischer Beschreibung von Atomorbitalen viele Bereiche moderner Wissenschaften. In diesem Experiment zur Untersuchung des charakteristischen Spektrums eines Neon-Plasmas soll es um die  Prinzipien dieses Feldes der Physik gehen.
+\newpage
 \section{Grundlagen}
 \subsection{Festkörper-Laser}\label{subsec:fklaser}
 \begin{wrapfigure}[15]{lo}{0.45\textwidth}
@@ -91,14 +93,73 @@ Am Übergang eines p-dotierten zu einem n-dotierten Halbleiterbauelement kommt e
 \end{figure}
 \subsection{Spektroskopie}
 Die Spektroskopie ist eine grundlegende Methode zur quantitativen und qualitativen Untersuchung des Energiespektrums einer Probe in Hinblick auf ihre Wechselwirkung mit einem Strahlungsfeld. Dabei trägt man eine spektrale Größe, wie z.Bsp. die Intensität, gegen eine, von der Energie abhängige Skala auf, was in der Regel die Frequenz oder Wellenlänge ist. Bei der Röntgenspektroskopie trägt man sogar gegen einen Winkel auf (nach \tilt{Bragg}, 1912). Es kann sowohl die Emission und somit Fluoreszenz, als auch die spezifische Absorption im Fokus stehen. Meist wird durch die charakteristische Aufnahme/Abgabe von Energie unter einem einfallenden Strahlungsfeld genutzt, um Rückschlüsse auf die atomare bzw. molekulare Struktur zu ziehen. Die auftretenden Peaks im Spektrum heißen Spektrallinien und sind einzigartig für jede Probe. Sie lassen wegen ihren unterschiedlichen Höhen, unter quantenmechanischer Betrachtung, auch Rückschlüsse auf die Übergangswahrscheinlichkeiten zwischen Energiniveaus zu. In unserem Fall geht es um die Untersuchung eines Neon-Plasmas und somit der Elektronenschale ionisierter Zustände des Edelgases.
-\subsection{Fabry-Pérot-Interferometer}
+\subsection{Fabry-Pérot-Interferometer}\label{subsec:fpi}
 Bei Interferometrie macht man sich, die durch Superposition von Wellen gleicher Frequenzen und verschiedener Phasenbeziehungen erhaltenen, Interferenzbilder zur Nutze. Diese hängen davon ab, welche Form der Kohärenz vorliegt. Schwankt die Phasendifferenz  zwischen $0$ und $2\pi$, so spricht man von inkohärenten Wellen. Ist jedoch für eine Beobachtungszeit $\Delta t$ die Phasendifferenz $\Delta \varphi$ konstant, und gilt $\Delta t>>2\pi/\omega$, so ist das Strahlungsfeld \tilt{zeitlich kohärent}. Liegt im gesamten Raum ein festes $\Delta \varphi$ vor, so spricht man von einem \tilt{räumlich kohärenten} Strahlungsfeld. Das entsprechenden \tilt{Kohörenzvolumen} ist das Produkt aus Kohärenzlänge $c\Delta t$ und der Fläche, welche aus allen Punkten $m$,$n$ mit $|\varphi\ix{m}-\varphi\ix{n}|>\pi$ besteht.
 \newpage
-Das \tilt{Fabry-Pérot}-Interferometer besteht aus zwei teildurchlässigen, planparallelen Spiegeln, welche den optischen Resonator bilden. Einerseits kann dies durch 2 einzelne, reflektierende Oberflächen mit entspiegelten Rückseiten oder durch einen einzelnen, kubischen Resonatorkörper mit spiegelnden Außenseiten realisiert werden. Letzteres bezeichnet man als \fett{Fabry-Pérot-Etalon}.\\
-Eine, unter dem Winkel $\gamma$ zum Lot einfallende Welle der Intensität $I\ix{0}$ wird innerhalb des FPI vielfach reflektiert als auch nach außen transmittiert. Die Interferenz der Strahlung kann nur innerhalb des Kohärenzvolumens beobachtet werden. Hinzu kommt, das die optische Wegdifferenz $\Delta s$ der reflektierte als auch transmittiertenTeilwellen nicht größer als die Kohärenzlänge sein darf.
-\subsection{Zeeman-Effekt}
-\subsection{Spektrale Linienbreite}
-\section{Durchführung}
+\begin{wrapfigure}[21]{ro}{0.45\textwidth}
+	\centering
+	\vspace{-0.75cm}
+	\includegraphics[width=0.45\textwidth]{fpi.png}
+	\caption{
+		\fett{Oben:}Strahlenverlauf einer Lichtquelle LQ durch die Linsen L$\ix{1}$,L$\ix{2}$\\
+		\fett{Unten:}zwei Spekrallinien $m$,$m+1$ der Breite $\Delta \nu$}
+\end{wrapfigure}
+Das \tilt{Fabry-Pérot}-Interferometer besteht aus zwei teildurchlässigen (Reflexionskoeffizient $R$), planparallelen Spiegeln, welche den optischen Resonator bilden. Einerseits kann dies durch 2 einzelne, reflektierende Oberflächen mit entspiegelten Rückseiten oder durch einen einzelnen, kubischen Resonatorkörper mit spiegelnden Außenseiten realisiert werden. Letzteres bezeichnet man als \fett{Fabry-Pérot-Etalon}.\\
+Eine, unter dem Winkel $\gamma$ zum Lot einfallende Welle der Intensität $I\ix{0}$ wird innerhalb des FPI vielfach reflektiert als auch nach außen transmittiert. Die dadurch erzeugte \tilt{Vielstrahlinterferenz} kann nur innerhalb des Kohärenzvolumens beobachtet werden. Hinzu kommt, das die optische Wegdifferenz $\Delta s$ der reflektierte als auch transmittierten Teilwellen nicht größer als die Kohärenzlänge sein darf. Die dazu gehörige Kohärenzzeit ergibt sich aus der spektralen Breite $\Delta \nu$ der Strahlen (siehe \ref{subsec:breite}) über $\Delta t=1/\Delta\nu$.\\
+Schreibt man sich nun die Intensitäten der transmittierten ($I\ix{T}$) und reflektierten ($I\ix{R}$) Wellen hin, so sieht man, dass diese abhängig von der Phasenbeziehung zur ursprünglichen Strahlung sind (siehe Gl. (\ref{eq:reflex}) und (\ref{eq:transmittiert}).
+\begin{align}
+	I\ix{R}=I\ix{0}\cdot\frac{F\cdot\sin^2\left(\frac{\Delta\varphi}{2}\right)}{1+F\cdot\sin^2\left(\frac{\Delta\varphi}{2}\right)} \label{eq:reflex}\\
+	I\ix{T}=I\ix{0}\cdot\frac{1}{1+F\cdot\sin^2\left(\frac{\Delta\varphi}{2}\right)} \label{eq:transmittiert}\\
+	\text{mit der Güte: } \,\, F=\frac{4\cdot R}{\left(1-R\right)^2}
+\end{align}
+Die optische Wegdifferenz zwischen zwei, nacheinander in die selbe Richtung ausgekoppelten Strahlen einer punktförmigen Lichtquelle ist gerade $2\cdot nd$, wobei $n$ der Brechungsindex und $d$ die Schichtdicke bzw. Gitterkonstante des \tilt{Etalons} ist. Für die Phasendifferenz der Strahlung der Wellenlänge $\lambda$ folgt damit, unter Beachtung der besprochenen Kohärenzbedingungen:
+\begin{align}
+	\Delta\varphi=\frac{4\pi}{\lambda}\cdot nd \label{eq:phasdiff} \,\,.
+	\end{align}
+Die Phasendifferenz und somit die Interferenzerscheinungen der Teilstrahlen sind offensichtlich frequenz- bzw. wellenlängenabhängig. Aufgrund dessen nutzt man das FPI, wie in diesem Experiment, zur Energieskalen-Kalibrierung eines spektroskopischen Versuchs.
+\subsection{Zeeman-Effekt}\label{subsec:zeeman}
+Der \tilt{Zeeman-Effekt} (P. Zeeman, 1896) beschreibt die Aufspaltung der Energieniveaus gleicher Drehimpulsquantenzahlen $l$ und somit die Aufhebung der $2l+1$-fachen Coulomb-Entartung. Durch finden auch Veränderung im Spektrum einer Probe unter Einfluss eines $\vec{B}$-Feldes statt.\\
+Die bewegte Ladung eines Elektrons mit dem Drehimpuls $\vec{l}$ erfährt unter der Wirkung eines äußeren Magnetfeldes, wegen seinem magnetischen Moment $\vec{\mu}=\gamma\vec{l}=\frac{e}{2m\ix{e}}\vec{l}$, eine Änderung der potentiellen Energie. Die z-Komponente des Bahndrehimpulses $\vec{l}$ ist $m\hbar$, weswegen die Energieänderung eines vorher entartetem Zustandes, unter Einwirkung eines in z-Richtung liegenden Magnetfeldes der Feldstärke $B$, zu
+\begin{align}
+	\Delta E=\frac{e}{2m\ix{e}}\vec{l}\vec{B}=g\frac{e}{2m\ix{e}}\hbar mB=g\mu\ix{B}mB
+\end{align}
+wird. Dabei ist $g$ das gyromagnetische Verhältnis.\\
+Unter Beachtung des Eigendrehimpulses Spin $\vec{s}$ der Elektronen findet eine weitere Aufspaltung der Spektrallinien statt. Dieser Erscheinung ist der annomale Zeeman-Effekt.\\
+Das magnetische Moment des Spins ist $\vec{\mu}\ix{S}=g\ix{s}\gamma\vec{s}$ mit dem anomalen $g$-Faktor $g\ix{S}\approx2$. In diesem Fall spielt der Gesamtdrehimpuls $\vec{j}=\vec{l}+\vec{s}$ des Elektrons eine Rolle. Mit der z-Komponente $j$ des Gesamtdrehimpulses und dem Landé-Faktor $g\ix{j}$ (siehe Gl. (\ref{eq:lande}) wird die Energieverschiebung in einem schwächeren Magnetfeld in z-Richtung zu
+\begin{align}
+	&\Delta E=g\ix{j}j\mu\ix{B}B \,\,. \\
+	g\ix{j}=1+&\frac{j\left(j+1\right)-l\left(l+1\right)+s\left(s+1\right)}{2j\left(j+1\right)} \label{eq:lande}
+\end{align}
+Für beide Fälle des Zeeman-Effektes sind die aufgespalteten Spektrallinien äquidistant zueinander, was durch die ganzen Zahlen $j$,$m$, und $l$ deutlich wird.\\
+Für stärkere Magnetfelder kommt es zum \tilt{Paschen-Back}-Effekt, welcher die Äquidistanz der Niveaus auflöst und die vorher benutzte Spin-Bahn-Kopplung $\vec{l}+\vec{s}$ zerstört. Die Drehimpulse stellen sich somit im Magnetfeld frei ein und erzeugen unterschiedliche Beiträge.
+\begin{align}
+	\Delta E=\mu\ix{B}B\left(m\pm g\ix{s}\frac{1}{2}\hbar\right)
+\end{align}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{Wasserstoff_Zeeman.png}
+	\caption{Termschema des Wasserstoff-Atoms}
+\end{figure}
+\subsection{Spektrale Linienbreite}\label{subsec:breite}
+Selbst bei beliebig guter Auflösung einer Messung findet man für eine Spektrallinie eines Spektrums ein $I(\nu)$. D.h. dass die Intensität nicht für eine einzelne Frequenz $\nu\ix{0}$, sondern für ein kleines Intervall $\delta\nu$/$\delta\omega$ um $\nu\ix{0}$/$\omega\ix{0}$ herum definiert ist.\\
+Ein angeregtes Elektron kann, klassisch, als harmonischer Oszillator verstanden werden. Die Abstrahlung von Energie führt zu einer Dämpfung, welcher eine schnell abfallende Schwingungsamplitude folgt. Aufgrund dessen ist die Abstrahlungsfrequenz keine monochromatische mehr, sondern zeigt ein kleines Spektrum. Demnach wird das Intensitätsprofil $I(\omega)$ unter Normierung mit $I\ix{0}$ zum \tilt{lorentz-Profil}.
+\begin{align}
+	\frac{I(\omega)}{I\ix{0}}=\frac{\gamma/2\pi}{\left(\omega-\omega\ix{0}\right)^2+\left(\gamma/2\right)^2}
+\end{align}
+Die sogenannte volle Halbwertsbreite $\gamma$ heißt auch \tilt{natürliche Linienbreite} und kann außerdem durch das Frequenzintervall ausgedrückt werden: $\gamma=\delta\omega=\delta\nu 2\pi$.\\
+Hat der angeregte Zustand nur eine Lebensdauer von $\tau$, so kann man über die \tilt{Heisenbergsche Unschärferelation} die natürliche Linienbreite durch Gl. (\ref{eq:unscharf}) gegeben.
+\begin{align}
+	\tau \delta\nu \leq\frac{\Delta E}{\hbar} \label{eq:unscharf}
+\end{align}
+Ein weiter Grund, weswegen Spektrallinien keine absolut scharfen Peaks sondern leicht aufgeweitete "`Berge"' sind, ist die \tilt{Doppler-Verbreiterung}. Ursache dessen ist der namensgebende Doppler-Effekt (C. Doppler, 1842), welcher durch die thermische Bewegung der emittierenden Teilchen auftritt. Die dadurch zu Stande kommende Verbreiterung der spektralen Linien ist viel größer als die des Lorentz-Profils. Vorrangig beobachtet man die in Gasen unter einem niedrigen Druck. Das Intensitätsprofil einer in $\omega\ix{0}$ liegenden Linie wird hierbei zu Gl. (\ref{eq:doppler}) mit der Doppler-Breite in Gl. (\ref{eq:breite}).
+\begin{align}
+	\frac{I(\omega)}{I\ix{0}}=&\exp\left({-\left(\frac{\omega-\omega\ix{0}}{c\omega\ix{0}\sqrt{2k\ix{B}T/m}c}\right)^2}\right)\label{eq:doppler}\\
+	\delta\omega=&\frac{\omega\ix{0}}{c}\sqrt{\frac{8k\ix{B}T\ln\left(2\right)}{m}}\label{eq:breite}
+\end{align}
+\section{Durchführung}\label{subsec:durch}
+Das Licht einer durchstimmbaren Laser-Diode wird über einen Strahlteiler in ein Fabry-Pérot-Interferometer und auf eine Plasmaröhre gelenkt. Die Aufnahme der monochromatischen Strahlung erfolgt über Photodioden.\\
+Der Referenzstrahl aus dem FPI gelangt in einen Detektor, welcher zur Datenauswertung an einen PC angeschlossen ist. Wie bereits ausgeführt (Abschn. \ref{subsec:fpi}) dient dieser Strahl zur Kalibrierung der Messung. Das, durch das Neon-Plasma auf den dahinter liegenden Detektor gelenkte Laser-Licht zeigt schließlich das charakteristische Spektrum. Ein starker Magnet kann zusätzlich über die Gasentladungsröhre gestülpt werden. Dessen $\vec{B}$-Feld erzeugt eine Zeeman-Aufspaltung im Plasma und verändert damit das Spektrum des Neons.\\
+Eingangs werden Hintergrundstrahlung und mögliche Temperaturschwankungen, welche starken Einfluss auf die Wellenlänge des Laser-Lichts, durch Feineinstellungen und Referenzmessungen eliminiert. Anschließend findet die Kalibrierung mit Hilfe des FPI statt. Ist der Aufbau abgestimmt, so wird für einen Strom durch das Plasma von $I\ix{p}=\unit[20]{mA}$ das Spektrum aufgenommen. Darauf folgend wiederholt man die Messung für variierenden Strom. Schließlich nutzt man das Feld eines stärkeren Magneten zur Aufspaltung der beobachteten Linien. Das Spektrum wird wiederum aufgenommen.
 \section{Auswertung}
 \section{Quellen}
 \end{document}
