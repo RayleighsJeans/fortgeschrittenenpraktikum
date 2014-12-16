@@ -156,10 +156,78 @@ Ein weiter Grund, weswegen Spektrallinien keine absolut scharfen Peaks sondern l
 	\frac{I(\omega)}{I\ix{0}}=&\exp\left({-\left(\frac{\omega-\omega\ix{0}}{c\omega\ix{0}\sqrt{2k\ix{B}T/m}c}\right)^2}\right)\label{eq:doppler}\\
 	\delta\omega=&\frac{\omega\ix{0}}{c}\sqrt{\frac{8k\ix{B}T\ln\left(2\right)}{m}}\label{eq:breite}
 \end{align}
+\newpage
 \section{Durchführung}\label{subsec:durch}
 Das Licht einer durchstimmbaren Laser-Diode wird über einen Strahlteiler in ein Fabry-Pérot-Interferometer und auf eine Plasmaröhre gelenkt. Die Aufnahme der monochromatischen Strahlung erfolgt über Photodioden.\\
 Der Referenzstrahl aus dem FPI gelangt in einen Detektor, welcher zur Datenauswertung an einen PC angeschlossen ist. Wie bereits ausgeführt (Abschn. \ref{subsec:fpi}) dient dieser Strahl zur Kalibrierung der Messung. Das, durch das Neon-Plasma auf den dahinter liegenden Detektor gelenkte Laser-Licht zeigt schließlich das charakteristische Spektrum. Ein starker Magnet kann zusätzlich über die Gasentladungsröhre gestülpt werden. Dessen $\vec{B}$-Feld erzeugt eine Zeeman-Aufspaltung im Plasma und verändert damit das Spektrum des Neons.\\
 Eingangs werden Hintergrundstrahlung und mögliche Temperaturschwankungen, welche starken Einfluss auf die Wellenlänge des Laser-Lichts, durch Feineinstellungen und Referenzmessungen eliminiert. Anschließend findet die Kalibrierung mit Hilfe des FPI statt. Ist der Aufbau abgestimmt, so wird für einen Strom durch das Plasma von $I\ix{p}=\unit[20]{mA}$ das Spektrum aufgenommen. Darauf folgend wiederholt man die Messung für variierenden Strom. Schließlich nutzt man das Feld eines stärkeren Magneten zur Aufspaltung der beobachteten Linien. Das Spektrum wird wiederum aufgenommen.
+\newpage
 \section{Auswertung}
+\subsection{Bestimmung des Off-Set und Kalibrierung}
+Für die Kalibrierung der Messung wurde folgendes ausgenutzt: die hauptsächliche Absorption des Ne-Plasmas liegt bei $\lambda\ix{0}=\unit[653,67]{nm}$ und die Abstände der Vielstrahlinterferenzmuster des FPI sind mit $\frac{c}{2nd}$ äquidistant. Nimmt man nun an, das sich im Interferometer Luft befindet ($n\approx1$) und der Weg $d\sim\unit[1]{cm}$ beträgt, so lässt sich die Abszisse des Spektrums eindeutig auflösen.\\
+Aufgrund der unterschiedlichen Leuchtintensitäten des Neon-Plasmas wurde für jede Messung ein eigener off-set bestimmt. Für die Anschaulichkeit und bessere Verdeutlichung der Verhältnisse wurde die Intensität $I\ix{Las}$, welcher der Detektor ohne zugeschaltetes Plasma misst, von den Werten $I\ix{Abs}$ subtrahiert und so die reinen Absorptionspeaks herausgestellt (Ergebnisse siehe \ref{img:ergeb}). In der Achsenbeschriftung sei $f\ix{0}=\unit[458,59]{THz}$.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{messwerte/datenohneoffset.pdf}
+	\caption{Absorptionspeaks bei $\lambda\ix{0}$ über angepasster Intensität in bel. Einheiten}\label{img:ergeb}
+\end{figure}
+\subsection{Auswertung bisheriger Daten}
+In \ref{img:ergeb} ist gut die Aufweichung in Richtung höherer Frequenzen zu erkennen. Sie entsteht durch die Absorption der anderer Neon-Isotope, welche ebenfalls im Edelgas vorkommen und im Spektrum dicht neben dem des eindeutig beobachteten Peaks liegen. Ihr Einfluss ist jedoch klein, da ihre Dichte sehr gering ist.\\
+Ebenfalls gut zu einzusehen ist die Abhängigkeit der Absorption vom Gasentladungsstrom $I\ix{p}$. Ein höherer Strom bedeutet eine stärkere Ionisation, was wiederum einer größeren Teilchendichte gleichbedeutend ist und damit zu mehr Absorption durch das Plasma führt.\\
+Da zur Kalibrierung der Skala eine Annahme über eine spezielle Wellenlänge in einem Absorptionspeak gemacht wurde, können so im Umkehrschluss nun keine Aussagen über die Wellenlängen charakteristischer Verläufe gemacht werden. Dies würde einem Kreisschluss entsprechen und hätte keine Aussagekraft.
+\subsection{Temperatur und Dichte}
+Mit Hilfe der Gleichungen (\ref{eq:absorp}), (\ref{eq:dichte}) und (\ref{eq:temp}) lassen sich wichtige Größen des Neon-Plasmas bestimmen. Die Zusammenführung gemessener und errechneter Werte finden sich in Tabellen \ref{tab:temp} und \ref{tab:dicht}.
+\begin{align}
+	T=\frac{\lambda\ix{0}^2 m\ix{Ne}}{8k\ix{B}\ln\left(2\right)} \cdot \Delta\nu^2 \label{eq:temp}
+	\end{align}
+Die mittlere Frequenzbreite $\Delta\nu$ ergibt sich hier aus der Breite des Absorptionspeaks, bei der dieser auf die Hälfte abgefallen ist. Dies lies sich leicht aus \ref{img:ergeb} bestimmen. Die Masse $m\ix{Ne}$ eines Ne-Atoms beträgt $\unit[22,2]{amu}$.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c}
+		$I\ix{p}$/mA & $\Delta \nu$/GHz & $T$/K \\ \hline
+		10 & 0,2501 & 12,87\\
+		12 & 0,269 & 14,9\\
+		14 & 0,279 & 16,0 \\
+		16 & 0,278 & 15,9 \\
+		18 & 0,283 & 16,5 \\
+		20 & 0,325 & 21,7 
+	\end{tabular}
+	\caption{Temperatur der Ne-Atome im Plasma nach Gl. (\ref{eq:temp})}\label{tab:temp}
+\end{table}
+Mit Hilfe des \tilt{Beer}'schen Absorptionsgesetzes lässt sich einfach der Absorptionskoeffizient des Neon-Plasmas bestimmen. Hierfür muss jedoch der optische Weg $L$ bekannt sein, welchen der Laser im Medium zurücklegt. Dieser war in unserem Fall $\unit[2]{cm}$.
+\begin{align}
+	I(L)=&I\ix{0}\exp\left(-\alpha L\right) \\
+	\alpha=&-\ln\left(\frac{I}{I\ix{0}}\right)\cdot \frac{1}{L} \label{eq:absorp}\\
+	\rightarrow n\ix{Ne}=&\frac{2\pi\varepsilon\ix{0}m\ix{e}c}{e^2\lambda\ix{0}\tilt{f}}\sqrt{\frac{2k\ix{B}T}{\pi m\ix{Ne}}}\cdot \alpha \label{eq:dichte}
+\end{align}
+Kennt man $\alpha$, so lässt sich mit Gl. (\ref{eq:dichte}) die Dichte der metastabilen Neon-Zustände im Plasma bestimmen, welche die elektromagnetische Strahlung des Lasers absorbieren. Die anschließende Tabelle zeigt den Zusammenhang von Temperatur, Dichte und Absorption. Offensichtlich bedeutet eine größerer Strom, wie bereits angemerkt, eine stärkere Absorption, was auf eine höhere Dichte der wechselwirkenden Teilchen zurückzuführen ist.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c|c|c}
+		$I\ix{0}$ & $I\ix{Abs}$ & $I\ix{p}$/mA & $\alpha$/m$^{-1}$ & $n\ix{Ne}/\frac{10^{-15}}{\text{m}^3}$ \\ \hline
+		0,72 & 0,5826 & 10 & 10,59 & 2,55 \\
+			 & 0,5636 & 12 & 12,25 & 3,18\\
+			 & 0,5401 & 14 & 14,37 & 3,86\\
+			 & 0,5291 & 16 & 15,4  & 4.13\\
+			 & 0,511  & 18 & 17,14 & 4,68\\
+			 & 0,4888 & 20 & 19,45 & 6,09\\
+	\end{tabular}
+\caption{Absorptionskoeffizient $\alpha$ und Dichte der absorbierenden Neon-Atome $n\ix{Ne}$}\label{tab:dicht}
+\end{table}
+\subsection{Zeeman-Aufspaltung}
+Die Beobachtung der Aufspaltung der Energieniveaus unter dem Einfluss eines Magnetfeldes ist leider nicht gelungen. Diesen Umstand zeigt \ref{img:zeeman}. Trotz der Stärke des Magneten von $\unit[147,4]{mT}$ konnte keine Aufteilung und symmetrische Verschiebung des Absorptionspeaks um $\lambda\ix{0}$ aufgenommen werden.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{messwerte/zeeman.pdf}
+	\caption{Absorption im Magnetfeld mit Vergleich zu vorherigen Messung}\label{img:zeeman}
+\end{figure}
+\newpage
 \section{Quellen}
+\begin{itemize}
+\item{Versuchsanleitung "`Laserspektroskopie"'}
+\item{\url{http://de.wikipedia.org/wiki/Spektroskopie}}
+\item{\url{http://de.wikipedia.org/wiki/Fabry-P%C3%A9rot-Interferometer}}
+\item{\url{http://de.wikipedia.org/wiki/Zeeman-Effekt}}
+\item{Protokoll zum Versuch "`Nd:YAG-Laser"'}
+\end{itemize}
 \end{document}
