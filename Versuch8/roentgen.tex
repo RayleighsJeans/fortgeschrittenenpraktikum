@@ -107,9 +107,94 @@ Anschließend wird für jedes Anodenmaterial ein detaillierteres Spektrum entspr
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{aufbau.png}
+	\caption{Röntgenröhre mit Goniometer und $2$\,-\,$\theta$\,-Anordnung} \label{img:aufbau}
 \end{figure}
 \newpage
 \section{Auswertung}
+\subsection{Charakteristischen Linien}
+In Abbildung \ref{tab:charak} sind die Spektren aller 3 Anodenmaterialien zusammen dargestellt. Klar heraus stechen dabei die charakteristischen Peaks eines jeden Materials, die abhängig von der inneren Struktur sind. In der sich anschließenden Tabelle \ref{tab:charak} sind die jeweiligen Wellenlängen und korrespondierenden Energien für diese angegeben. Dabei unterscheiden sich die Messergebnisse nur um eine $\unit{pm}$ von den gegebenen Literaturwerten (siehe \num{V}). Der Unterschied zwischen charakteristischem und kontinuierlichem Bremsspektrum wurde hierbei sehr deutlich. Die besagten Intensitätsmaxima sind außerdem unabhängig von der Anodenspannung (siehe \ref{subsec:mess}), was diese Erkenntnis bekräftigt.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{spektren.pdf}
+	\caption{Referenzspektren der versch. Materialien bei $\unit[33]{kV}$ und $\unit[1]{mA}$}\label{img:refere}
+\end{figure}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c|c|c}
+		Anodenelement & $\lambda_\alpha$/pm & $E_{K_{\alpha}}$/eV & $\lambda_{\beta}$/pm & $E_{K_{\beta}}$/eV \\ \hline
+		Kupfer & $155,449$ & $7975,9$ & $140,409$ & $8830,5$ \\ \hline
+		Eisen & $196,24$ & $6381$ & $178,458$ & $6947,5$ \\ \hline
+		Molybdän & $73,54$ & $16859$ & $65,61$ & $18897$ \\ \hline
+	\end{tabular}
+	\caption{Wellenlängen $\lambda$ der charakteristischen Linien im Spektrum der Anodenmaterialien}\label{tab:charak}
+\end{table}
+\subsection{Duane-Hunt-Gesetz und Planck-Konstante}
+Im Anschluss sind Detailaufnahmen der Spektren einer jeden Anode für die Beschleunigungsspannungen $\unit[15-31]{kV}$ gezeigt. Hieraus lassen sich leicht die in \ref{tab:min} aufgeführten Abschneidewellenlängen $\lambda\ix{min}$ ablesen. Etwaiges Rauschen bzw. verbleibende Restintensität, oder sogar ein erneutes Ansteigen der Impulszahlen, kann durch die offene Konstruktion des Goniometers und der $2$\,-\,$\theta$\,-\,Anordnung erklärt werden: der Kristall (u.U. auch Blende) beugt nicht nur die Strahlung, sondern streut sie auch in den gesamten Aufbau.\\
+Offensichtlich verschiebt sich die minimale Wellenlänge zu größeren Energien für höhere Anodenspannungen, was ebenso einsichtig ist, da ja diese gleichbedeutend sind mit größeren kinetischen Energien der Elektronen.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{kupfermin.pdf}
+	\caption{Nahaufnahme der niedrigsten Wellenlängen von Kupfer über versch. Spannungen} \label{img:cumin}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{eisenmin.pdf}
+	\caption{Nahaufnahme der niedrigsten Wellenlängen von Eisen über versch. Spannungen} \label{img:femin}
+\end{figure}
+	
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{molymin.pdf}
+	\caption{Nahaufnahme der niedrigsten Wellenlängen von Molybdän über versch. Spannungen} \label{img:momin}
+\end{figure}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c|c}
+		Wellenlängen &  Kupfer & Eisen & Molybdän \\ \hline
+		$\lambda\ix{min}(\unit[15]{kV})$/pm & $168,02$ & $81,7$ & $\textsc{162,6}$\\ \hline
+		$\lambda\ix{min}(\unit[17]{kV})$/pm & $150,41$ & $72,6$ & $144,31$ \\ \hline
+		$\lambda\ix{min}(\unit[19]{kV})$/pm & $136,53$ & $64,95$ & $129,73$ \\ \hline
+		$\lambda\ix{min}(\unit[21]{kV})$/pm & $122,4$ & $58,4$ & $115,7$ \\ \hline
+		$\lambda\ix{min}(\unit[23]{kV})$/pm & $114,7$ & $52,5$ & $105,6$ \\ \hline
+		$\lambda\ix{min}(\unit[25]{kV})$/pm & $107,04$ & $46,7$ & $97,2$\\ \hline
+		$\lambda\ix{min}(\unit[27]{kV})$/pm & $101,52$ & $43,42$ & $89,5$\\ \hline
+		$\lambda\ix{min}(\unit[29]{kV})$/pm & $94,6$ & $39,9$ & $83,6$ \\ \hline
+		$\lambda\ix{min}(\unit[31]{kV})$/pm & $88,9$ & $36,34$ & NaN\\ \hline
+	\end{tabular}
+	\caption{Minimale Wellenlängen der versch. Materialien bei entsprechenden Spannungen}\label{tab:min}
+\end{table}
+Schließlich kann man aus den Werten in \ref{tab:min} das in Gl. (\ref{eq:verschieb}) besprochene Veschiebungsgesetz nach Duane und Hunt verifizieren. Hierfür macht man einen einfachen Ansatz einer Gerade ohne Offset in der Vertikalen $f(1/U\ix{B})=f(x)=m\cdot x$. Diese Annahme benutzt man nun für einen Fit über die Messdaten einer Anode und sieht damit in \ref{img:duane}, dass das Produkt aus Spannung und Abschneidewellenlänge konstant ist. \\
+Hierbei kann man den Anstieg wiederum zur Bestimmung der Fundamentalkonstante $h$, dem \tilt{Planckschen Wirkungsquantum} benutzen. Der Anstieg ist nämlich gerade $m=h\cdot c/e$. Die ermittelten Werte zeigen Gl. (\ref{eq:h1})-(\ref{eq:h2}). Der Fakt, dass mehrere Ergebnisse erzielt wurden, zeugt nicht von der großen Genauigkeit der Methode zur Bestimmung dieser Konstante. Andererseits ist es möglich, dass für die jeweiligen Anoden eine grundlegender Experimentierfehler vorlag und deswegen die Messung an Aussagekraft verlor. Jedoch ist es befriedigend, dass unser Wert für Eisen sehr nahe am wahren Wert liegt.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{duane.pdf}
+	\caption{Duane-Hunt-Gesetz im Vergleich zu den Messpunkten und deren Fit}\label{img:duane}
+\end{figure}
+\begin{align}
+	h\ix{Cu}=\unit[1,38844\cdot10^{-33}]{Js} \label{eq:h1}\\
+		h\ix{Fe}=\unit[6,3929\cdot10^{-34}]{Js} \\
+			h\ix{Mo}=\unit[1,30951\cdot10^{-33}]{Js} \label{eq:h2}
+\end{align}
+\subsection{Messwerte}\label{subsec:mess}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{kupferges.pdf}
+	\caption{Röntgenspektrum einer Kupferanode ($\unit[15-31]{kV}$ Anodenspannung, $\unit[1]{mA}$ Anodenstrom)}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{eisenges.pdf}
+	\caption{Röntgenspektrum einer Eisenanode ($\unit[15-31]{kV}$ Anodenspannung, $\unit[1]{mA}$ Anodenstrom)}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{molyges.pdf}
+	\caption{Röntgenspektrum einer Molybdänanode ($\unit[15-31]{kV}$ Anodenspannung, $\unit[1]{mA}$ Anodenstrom)}
+\end{figure}
+\newpage
 \section{Quellen}
 	\num{I} -- \url{http://de.wikipedia.org/wiki/R%C3%B6ntgenstrahlung}\\ \\
 	\num{II} -- \dots\url{/wiki/R%C3%B6ntgenphotoelektronenspektroskopie}\\ \\

@@ -1,6 +1,3 @@
-Zählrohrwinkel	Rate bei 15kV	Rate bei 17kV	Rate bei 19kV	Rate bei 21kV	Rate bei 23kV	Rate bei 25kV	Rate bei 27kV	Rate bei 29kV	Rate bei 31kV
-2*theta/°	R(15kV)/Imp/s	R(17kV)/Imp/s	R(19kV)/Imp/s	R(21kV)/Imp/s	R(23kV)/Imp/s	R(25kV)/Imp/s	R(27kV)/Imp/s	R(29kV)/Imp/s	R(31kV)/Imp/s
-
 7,0	1,0	2,0	2,0	3,0	7,0	14,0	25,0	45,0	0,0
 7,2	0,0	1,0	3,0	4,0	6,0	12,0	24,0	45,0	0,0
 7,4	2,0	1,0	2,0	4,0	4,0	8,0	18,0	31,0	0,0

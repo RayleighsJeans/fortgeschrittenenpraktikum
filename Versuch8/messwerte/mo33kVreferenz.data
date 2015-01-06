@@ -1,6 +1,6 @@
-Kristallwinkel	Rate bei 33kV
-theta/°	R(33kV)/Imp/s
-
+#Kristallwinkel	Rate bei 33kV
+#theta/°	R(33kV)/Imp/s
+#
 3,5	120,0
 3,6	96,0
 3,7	85,0

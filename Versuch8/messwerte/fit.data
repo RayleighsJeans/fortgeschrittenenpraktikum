@@ -1,0 +1,19 @@
+#U_B/kV		lambda,eisen/pm		lambda,kupfer/pm		lambda,molybdän/pm
+15		81,7			168,02				168,02
+17		72,6			150,41				144,31
+19		64,95			136,53				129,73
+21		58,4			122,4				115,7
+23		52,5			114,7				105,6
+25		46,7			107,04				97,2
+27		43,42			101,52				89,5
+29		39,9			94,6				83,6
+31		36,34			88,9				NaN
+
+#		$\lambda\ix{min}(\unit[17]{kV})$/pm & $150,41$ & $72,6$ & $144,31$ \\ \hline
+#		$\lambda\ix{min}(\unit[19]{kV})$/pm & $136,53$ & $64,95$ & $129,73$ \\ \hline
+#		$\lambda\ix{min}(\unit[21]{kV})$/pm & $122,4$ & $58,4$ & $115,7$ \\ \hline
+#		$\lambda\ix{min}(\unit[23]{kV})$/pm & $114,7$ & $52,5$ & $105,6$ \\ \hline
+#		$\lambda\ix{min}(\unit[25]{kV})$/pm & $107,04$ & $46,7$ & $97,2$\\ \hline
+#		$\lambda\ix{min}(\unit[27]{kV})$/pm & $101,52$ & $43,42$ & $89,5$\\ \hline
+#		$\lambda\ix{min}(\unit[29]{kV})$/pm & $94,6$ & $39,9$ & $83,6$ \\ \hline
+#		$\lambda\ix{min}(\unit[31]{kV})$/pm & $88,9$ & $36,34$ &
