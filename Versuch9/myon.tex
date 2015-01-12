@@ -146,8 +146,123 @@ Anschließend wird für eine Zeit von $\unit[1000]{s}$ die Zahl der einfallenden
 Es folgen jeweils eine $\unit[24]{h}$ dauernde Messung mit und ohne Abschirmung (Papier) über dem Aufbau.
 \newpage
 \section{Auswertung}
+\subsection{Rate der einfallenden Myonen}
+Im Folgenden sind die Zählraten der Ereignisse im Szintillator für verschiedenen Gesamtdauern und Auswertungsintervalle dargestellt.\\
+Die Intervalle, welche für die Auswertung genutzt wurden, sind $\unit[1]{s}$, $\unit[2]{s}$, $\unit[5]{s}$ und $\unit[10]{s}$. Die Messungen wurden über eine Dauer von $\unit[1000]{s}$ (siehe \ref{img:zähl1000}) und $\unit[24]{h}$ (siehe \ref{img:zählerster} und \ref{img:zählzweiter}) durchgeführt. In den Abbildungen wird die Zahl der Ereignisse für ein Auswertungsintervall gegen ihre Häufigkeit über die gesamte Dauer aufgetragen.\\
+Offensichtlich genügt die Rate der einfallenden Myonen, in Abhängigkeit der Intervallgröße, einersog. \tilt{Poisson-Verteilung}. Für diese gilt allgemein: der Erwartungswert ist die charakteristische Größe der Verteilung und ist gleich der zugehörigen Varianz. Außerdem gibt der Variationskoeffizient $VarK\left(\dots\right)$, welcher einer normierten Standardabweichung entspricht, die Schwankungen des Erwartungswertes über $1/\sqrt{Erwartungswert}$ an. In \ref{tab:1000s},\ref{tab:erstertag} und \ref{tab:zweitertag} sind die jeweiligen Größen angegeben.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c}
+		Intervalldauer & Erwartungswert/Ereignissen & Variationskoeffizient/Ereignissen \\ \hline
+		$\unit[1]{s}$ & 2,188699 & 0,6759381 \\ \hline
+		$\unit[2]{s}$ & 4,250295 & 0,4850544 \\ \hline
+		$\unit[5]{s}$ & 10,607213 & 0,307043 \\ \hline
+		$\unit[10]{s}$ & 21,972804 & 0,21333 
+	\end{tabular}
+	\caption{Wertetabelle für die Messung über $\unit[1000]{s}$}\label{tab:1000s}
+\end{table}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c}
+		Intervalldauer & Erwartungswert/Ereignissen & Variationskoeffizient/Ereignissen \\ \hline
+		$\unit[1]{s}$ & 2,773809 & 0,60042 \\ \hline
+		$\unit[2]{s}$ & 5,529319 & 0,4252694 \\ \hline
+		$\unit[5]{s}$ & 13,816412 & 0,26903 \\ \hline
+		$\unit[10]{s}$ & 27,793620 & 0,18968
+	\end{tabular}
+	\caption{Wertetabelle für die Messung über $\unit[24]{h}$ mit Absorber}\label{tab:erstertag}
+\end{table}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c}
+		Intervalldauer & Erwartungswert/Ereignissen & Variationskoeffizient/Ereignissen \\ \hline
+		$\unit[1]{s}$ & 2,797301 & 0,59790 \\ \hline
+		$\unit[2]{s}$ & 5,624372 & 0,421660 \\ \hline
+		$\unit[5]{s}$ & 14,141827 & 0,26591 \\ \hline
+		$\unit[10]{s}$ & 28,149074 & 0,18848
+	\end{tabular}
+	\caption{Wertetabelle für die Messung über $\unit[24]{h}$ ohne Absorber}\label{tab:zweitertag}
+\end{table}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{messwerte/histo1000s.pdf}
+	\caption{Zählrate für eine Messung über $\unit[1000]{s}$ mit der Absorption eines Stapels Papier}\label{img:zähl1000}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{messwerte/histoerstertag.pdf}
+	\caption{Zählrate für eine Messung über $\unit[24]{h}$ mit der Absorption eines Stapels Papier}\label{img:zählerster}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{messwerte/histozweitertag.pdf}
+	\caption{Zählrate für eine Messung über $\unit[24]{h}$ ohne Absorption}\label{img:zählzweiter}
+\end{figure}	
+Nimmt man sich die Grundfläche des Szintillatorzylinders als Eintrittsfläche her und betrachtet den Literaturwert der Einfallrate $\unit[1]{\frac{1}{cm^2\cdot s}}$ als gegeben, so errechnet sich eine zu erwartende Ereigniszahl von $\approx\unit[1]{\frac{1}{s}}$. Der Vergleich ($\approx\unit[2]{\frac{1}{s}}$) lässt die Messwerte plausibel erscheinen, wobei ja jeglicher Einfall, außer dem senkrechten, vernachlässigt wurde. Besonders die Korrelation zwischen den eintägigen Messungen bestätigt die Messwerte, da dort der, wenn auch geringe, Einfluss des Absorbers sichtbar wird.
+\subsection{Lebensdauer der Myonen}
+Die \ref{img:zerfall10s} bis \ref{img:zerfall1000s} zeigen die Messdaten für die Zerfälle der Myonen und einen entsprechenden exponentiellen Fit durch diese hindurch. Die daraus erhaltenen Werte für die Lebensdauer der Myonen werden dabei unter der Annahme angegeben, dass die Zeit zwischen Eintritt und Zerfall des Teilchens gerade $\tau$ entspricht. Diese Aussage ist offensichtlich eine Vereinfachung zur Bestimmung der Halbwertszeit, da hierbei die Zeit ,welche das Myon außerhalb des Messaufbaus verbringt, vernachlässigt wird.\\
+In \ref{tab:zerfall} sind die Lebensdauern für die jeweiligen Auflösungsintervalle angegeben.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c}
+		Intervalllänge/s & Lebensdauer/ns \\ \hline
+		10 & 2085,56 \\ \hline
+		20 & 2085,59 \\ \hline
+		50 & 2064,36 \\ \hline
+		100 & 2041,53 \\ \hline
+		1000 & 1994,02
+	\end{tabular}
+\end{table}
+Nach Literatur$^{\nummat{IV}}$ beträgt die wahre Lebensdauer eines Myons $\unit[2196,982\tenpo{-9}]{s}$. Unter der gemachten Näherung sind die erhaltenen Messwerte damit in einem angemessene Fehlerbereich um den Literaturwert.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{messwerte/lifetime10s.pdf}
+	\caption{Exponentieller Fit und Messdaten der Myonen-Zerfälle für eine Intervallauflösung von $\unit[10]{s}$}\label{img:zerfall10s}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{messwerte/lifetime20s.pdf}
+	\caption{Exponentieller Fit und Messdaten der Myonen-Zerfälle für eine Intervallauflösung von $\unit[20]{s}$}\label{img:zerfall20s}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{messwerte/lifetime50s.pdf}
+	\caption{Exponentieller Fit und Messdaten der Myonen-Zerfälle für eine Intervallauflösung von $\unit[50]{s}$}\label{img:zerfall50s}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{messwerte/lifetime100s.pdf}
+	\caption{Exponentieller Fit und Messdaten der Myonen-Zerfälle für eine Intervallauflösung von $\unit[100]{s}$}\label{img:zerfall100s}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{messwerte/lifetime1000s.pdf}
+	\caption{Exponentieller Fit und Messdaten der Myonen-Zerfälle für eine Intervallauflösung von $\unit[1000]{s}$}\label{img:zerfall1000s}
+\end{figure}
+\subsection{Absorption}
+Nimmt man für die Absorption durch das verwendete Papier ein Exponentialgesetz der Form $\exp\left(-\alpha\ix{P}\cdot h\right)$, mit dem Abschwächungskoeffizienten $\alpha\ix{P}$ und der Dicke $h$ des Papiers, an, so kann unter Vergleich der Daten der unterschiedlichen Messungen Rückschluss auf den Absorptionsfaktor gezogen werden.\\
+\begin{align}
+	\text{Zählrate ohne Absorber }&N\ix{0} \nonumber \\
+	\text{Zählrate mit Absorber }N\left(h\right)=&N\ix{0}\exp\left(-\alpha\ix{P}\cdot h\right) \label{eq:absorb}
+\end{align}
+Mit der Gl. (\ref{eq:absorb}) können die Messergebnisse aus \ref{tab:erstertag} und \ref{tab:zweitertag} in \ref{tab:endlich} weiterverarbeitet werden.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c}
+		Intervalllänge & Absorptionskoeffizient/$\unit{\frac{1}{m}}$ \\ \hline
+		$\unit[1]{s}$ & 0,008433 \\ \hline
+		$\unit[2]{s}$ & 0,017044 \\ \hline
+		$\unit[5]{s}$ & 0,02328\\ \hline
+		$\unit[10]{s}$ & 0,012707
+	\end{tabular}
+\caption{Absorptionskoeffizient aus dem Wertevergleich vorheriger Messungen und über \ref{eq:absorb}}\label{tab:endlich}
+\end{table}
+Für einen Vergleich zur Literatur ließen sich leider keine geeigneten Werte finden.\\
+Ein Fehler dieser Art der Herangehensweise an die Absorption durch das Papier kann u.a. der nicht-senkrechte Einfall in den Messaufbau und damit der Verzerrung der Berechnung sein.\\
+Das Miteinbeziehen unterschiedlicher Luftdrücke erscheint nicht sinnvoll, da das Myon aus großen Höhen durch sehr viele Atmosphärenschichten gelangt. Deswegen müssten, für eine adequate Betrachtung des Einflusses der Wetterverhältnisse auf die Myonen-Strahlung auf die Erde, sämtliche betreffenden Parameter (Temperatur, Druck, Luftfeuchtigkeit, Verschmutzung usw.) zumindest entlang eines vertikalen Schnittes von einer fiktiven Quelle aus, welche senkrecht auf dem Aufbau steht, bis zur Messapparatur bekannt sein.
 \section{Quellen}
 \num{I} -- \url{http://de.wikipedia.org/wiki/Myon}; Abschn.: Zerfall, Quelle \ref{img:zerfall} \\ \\
 \num{II} -- \url{http://de.wikipedia.org/wiki/W-Boson}\\ \\
 \num{III} -- Versuchsanleitung "`Myonenspektrometer"'; T.E. Coan, J. Ye; Quelle \ref{img:alles}, S.18\\ \\
+\num{IV} -- \url{http://de.wikipedia.org/wiki/Myon} \\ \\
 \end{document}

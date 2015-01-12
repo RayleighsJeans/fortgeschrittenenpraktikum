@@ -164,3 +164,8 @@ print "Aber im Grunde sind es Poisson für Zählrate und Exponential für Lebens
 print "Erwartungswerte zur Zählrate finden sich in /tmp/[DATEINAME].conclusion"
 print "Zählrate=En/Intervallbreite"
 print "Erwartungswert der Lebensdauer ist 1/ln, such dir aus, welches l du nehmen willst"
+print "Lebensdauer, Intervall 1000s  ", 1./l1000
+print "Lebensdauer, Intervall 50s  ", 1./l50
+print "Lebensdauer, Intervall 20s  ", 1./l20
+print "Lebensdauer, Intervall 10s  ", 1./l10
+print "Lebensdauer, Intervall 100s  ", 1./l100
